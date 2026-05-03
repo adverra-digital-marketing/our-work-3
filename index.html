@@ -5,96 +5,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adverra | Digital Growth Agency</title>
+<title>Adverra | Elite Growth Agency</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
 
+/* GLOBAL */
+
 :root{
 --bg:#050505;
---card:#101010;
---text:#ffffff;
---gray:#bdbdbd;
 --gold:#d4af37;
+--text:#ffffff;
+--glass:rgba(255,255,255,.06);
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:Inter,sans-serif;
-background:var(--bg);
-color:var(--text);
+background:radial-gradient(circle at top, #111 0%, #050505 60%);
+color:white;
+overflow-x:hidden;
 }
 
 /* HEADER */
 
 header{
 position:fixed;
-top:0;
-width:100%;
-background:rgba(10,10,10,.8);
-backdrop-filter:blur(10px);
+top:20px;
+left:50%;
+transform:translateX(-50%);
+width:92%;
+max-width:1300px;
+background:rgba(15,15,15,.7);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
 z-index:999;
 }
 
 nav{
-max-width:1200px;
-margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px;
+padding:15px 20px;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:10px;
+font-weight:800;
 }
 
 .logo img{height:40px;border-radius:10px;}
 
 .nav-links{
 display:flex;
-gap:20px;
+gap:30px;
 }
 
 .nav-links a{
-color:white;
+color:#ddd;
 font-size:14px;
 }
 
 /* HERO */
 
 .hero{
-padding:140px 20px 100px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-max-width:900px;
-margin:auto;
+padding:120px 20px 80px;
 }
 
 .hero h1{
-font-size:clamp(40px,8vw,80px);
+font-size:clamp(50px,9vw,120px);
 font-weight:900;
-line-height:1;
+line-height:.95;
+letter-spacing:-2px;
 }
 
-.hero span{color:var(--gold);}
+.hero span{
+color:var(--gold);
+}
 
 .hero p{
-margin:20px auto;
-color:#ccc;
-font-size:18px;
-line-height:1.6;
+margin-top:25px;
+color:#cfcfcf;
+font-size:20px;
+max-width:700px;
+margin-inline:auto;
+}
+
+.cta{
+margin-top:40px;
 }
 
 .btn{
-padding:14px 28px;
+padding:16px 34px;
 border-radius:50px;
-display:inline-block;
+font-weight:700;
 margin:10px;
-font-weight:600;
+display:inline-block;
 }
 
 .primary{
@@ -103,107 +119,110 @@ color:black;
 }
 
 .secondary{
-border:1px solid #444;
+border:1px solid rgba(255,255,255,.2);
 }
 
 /* SECTION */
 
 section{
-max-width:1200px;
+max-width:1300px;
 margin:auto;
-padding:80px 20px;
+padding:120px 20px;
 }
 
 .title{
+font-size:clamp(36px,5vw,70px);
 text-align:center;
-font-size:36px;
-margin-bottom:50px;
-font-weight:800;
+font-weight:900;
+margin-bottom:80px;
 }
 
 /* SERVICES */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,.04);
+background:var(--glass);
 border:1px solid rgba(255,255,255,.08);
-border-radius:20px;
+border-radius:30px;
 overflow:hidden;
-transition:.3s;
+transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-10px);
 }
 
 .card img{
-height:200px;
+height:260px;
 object-fit:cover;
 }
 
 .card-content{
-padding:20px;
+padding:30px;
 }
 
 .card h3{
+font-size:24px;
 margin-bottom:10px;
-font-size:20px;
 }
 
 .card p{
 color:#ccc;
-font-size:14px;
 }
 
 /* PORTFOLIO */
 
-.portfolio-grid{
+.portfolio{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
-.portfolio-grid img{
-height:280px;
+.portfolio img{
 width:100%;
+height:400px;
 object-fit:cover;
-border-radius:20px;
+border-radius:25px;
+transition:1s;
+}
+
+.portfolio img:hover{
+transform:scale(1.05);
 }
 
 /* CONTACT */
 
 .contact{
 text-align:center;
-background:#0e0e0e;
-border-radius:20px;
-padding:50px 20px;
+background:linear-gradient(135deg,#111,#1a1a1a);
+border-radius:40px;
+padding:80px 20px;
 }
 
 .contact h2{
-font-size:32px;
+font-size:40px;
 margin-bottom:10px;
 }
 
-.contact p{color:#ccc;}
-
-.numbers{
-margin:20px 0;
+.contact p{
+color:#ccc;
 }
 
-.numbers h3{
-margin:5px 0;
+.number{
+margin:20px 0;
+font-size:22px;
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
 color:#888;
 }
 
@@ -213,7 +232,7 @@ color:#888;
 
 .nav-links{display:none;}
 
-.hero h1{font-size:42px;}
+.hero h1{font-size:50px;}
 
 .hero p{font-size:16px;}
 
@@ -230,12 +249,12 @@ color:#888;
 
 <div class="logo">
 <img src="https://raw.githubusercontent.com/adverra-digital-marketing/our-work/main/assests/logo.jpeg">
-<b>Adverra</b>
+Adverra
 </div>
 
 <div class="nav-links">
 <a href="#services">Services</a>
-<a href="#portfolio">Work</a>
+<a href="#work">Work</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -246,14 +265,23 @@ color:#888;
 
 <section class="hero">
 
-<h1>We Scale <span>Indian</span> Brands</h1>
+<div>
+
+<h1>
+We Build <span>India’s</span><br>
+Next Big Brands
+</h1>
 
 <p>
-Premium content, paid ads & high-converting websites designed for modern businesses.
+Elite digital marketing, content creation & high-performance growth systems for serious businesses.
 </p>
 
-<a href="#contact" class="btn primary">Start Growing</a>
-<a href="#services" class="btn secondary">Explore Services</a>
+<div class="cta">
+<a href="#contact" class="btn primary">Start Scaling</a>
+<a href="#services" class="btn secondary">View Services</a>
+</div>
+
+</div>
 
 </section>
 
@@ -266,18 +294,18 @@ Premium content, paid ads & high-converting websites designed for modern busines
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
 <div class="card-content">
 <h3>Social Media</h3>
-<p>Instagram growth for Indian brands</p>
+<p>Content & growth for Indian audience</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1557838923-2985c318be48">
+<img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9">
 <div class="card-content">
 <h3>Paid Ads</h3>
-<p>Meta & Google performance ads</p>
+<p>ROI focused campaigns</p>
 </div>
 </div>
 
@@ -285,7 +313,7 @@ Premium content, paid ads & high-converting websites designed for modern busines
 <img src="https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2">
 <div class="card-content">
 <h3>Video Production</h3>
-<p>Reels & cinematic ads</p>
+<p>Reels, ads & brand films</p>
 </div>
 </div>
 
@@ -293,7 +321,7 @@ Premium content, paid ads & high-converting websites designed for modern busines
 <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d">
 <div class="card-content">
 <h3>Website Design</h3>
-<p>Modern responsive websites</p>
+<p>High converting premium websites</p>
 </div>
 </div>
 
@@ -301,13 +329,13 @@ Premium content, paid ads & high-converting websites designed for modern busines
 
 </section>
 
-<!-- PORTFOLIO -->
+<!-- WORK -->
 
-<section id="portfolio">
+<section id="work">
 
-<h2 class="title">Recent Work</h2>
+<h2 class="title">Our Work</h2>
 
-<div class="portfolio-grid">
+<div class="portfolio">
 
 <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47">
 <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
@@ -324,14 +352,12 @@ Premium content, paid ads & high-converting websites designed for modern busines
 
 <div class="contact">
 
-<h2>Let’s Work Together</h2>
+<h2>Let’s Build Something Massive</h2>
 
-<p>Call or WhatsApp now</p>
+<p>Direct connect with our team</p>
 
-<div class="numbers">
-<h3>+91 92135 25165</h3>
-<h3>+91 92744 36018</h3>
-</div>
+<div class="number">+91 92135 25165</div>
+<div class="number">+91 92744 36018</div>
 
 <a href="https://wa.me/919213525165" class="btn primary">WhatsApp Now</a>
 
