@@ -11,6 +11,15 @@
 
 <style>
 
+:root{
+--bg:#050505;
+--card:rgba(255,255,255,0.06);
+--text:#fff;
+--muted:#bdbdbd;
+--gold:#d4af37;
+--radius:24px;
+}
+
 *{
 margin:0;
 padding:0;
@@ -19,31 +28,32 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:#0b0b0b;
-color:#fff;
+background:radial-gradient(circle at top,#111, #050505);
+color:var(--text);
 overflow-x:hidden;
 }
-
-a{text-decoration:none;color:inherit;}
 
 /* HEADER */
 header{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
+top:15px;
+left:50%;
+transform:translateX(-50%);
+width:95%;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:18px;
 z-index:999;
 }
 
 nav{
-max-width:1200px;
-margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 20px;
+max-width:1200px;
+margin:auto;
 }
 
 .logo{
@@ -64,65 +74,58 @@ gap:20px;
 }
 
 .nav-links a{
-font-size:14px;
 color:#ddd;
+font-size:14px;
 }
 
 /* HERO */
 .hero{
-padding:120px 20px 60px;
-max-width:1200px;
+padding:140px 20px 60px;
+max-width:1100px;
 margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
+text-align:center;
 }
 
 .hero h1{
-font-size:48px;
-line-height:1.1;
+font-size:44px;
+line-height:1.2;
 }
 
 .hero span{
-color:#f5c542;
+color:var(--gold);
 }
 
 .hero p{
 margin-top:15px;
-color:#ccc;
+color:var(--muted);
 line-height:1.6;
 }
 
+/* BUTTON */
 .btn{
 display:inline-block;
 margin-top:20px;
 padding:12px 24px;
-background:#f5c542;
+background:var(--gold);
 color:#000;
-font-weight:600;
 border-radius:30px;
+font-weight:600;
 }
 
-/* IMAGE */
-.hero img{
-width:100%;
-border-radius:20px;
-}
-
-/* SERVICES */
+/* SECTION */
 .section{
 max-width:1200px;
 margin:auto;
-padding:60px 20px;
+padding:70px 20px;
 }
 
 .title{
 text-align:center;
-font-size:32px;
+font-size:30px;
 margin-bottom:40px;
 }
 
+/* SERVICES */
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -130,22 +133,23 @@ gap:20px;
 }
 
 .card{
-background:#151515;
-padding:20px;
-border-radius:20px;
-text-align:center;
+background:var(--card);
+padding:22px;
+border-radius:var(--radius);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .card i{
-font-size:30px;
-color:#f5c542;
+font-size:26px;
+color:var(--gold);
 margin-bottom:10px;
 }
 
 .card p{
 color:#bbb;
 font-size:14px;
-margin-top:10px;
+margin-top:8px;
 }
 
 /* PORTFOLIO */
@@ -155,61 +159,75 @@ grid-template-columns:repeat(4,1fr);
 gap:15px;
 }
 
-.portfolio img{
+.project{
+background:var(--card);
+border-radius:18px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.project img{
 width:100%;
-height:200px;
+height:160px;
 object-fit:cover;
-border-radius:15px;
+}
+
+.project div{
+padding:12px;
+}
+
+.project h4{
+font-size:14px;
+}
+
+.project p{
+font-size:12px;
+color:#aaa;
+margin-top:5px;
 }
 
 /* CONTACT */
 .contact{
 text-align:center;
-background:#111;
+background:var(--card);
 padding:60px 20px;
-border-radius:20px;
+border-radius:30px;
 }
 
 .contact h2{
-font-size:28px;
 margin-bottom:20px;
 }
 
 .numbers{
 display:flex;
 justify-content:center;
-gap:20px;
+gap:15px;
 flex-wrap:wrap;
 }
 
 .number{
-background:#1c1c1c;
-padding:15px 25px;
-border-radius:15px;
+padding:12px 18px;
+background:rgba(255,255,255,0.05);
+border-radius:12px;
 }
 
 /* WHATSAPP */
 .wa{
 position:fixed;
-right:20px;
 bottom:20px;
-background:#25d366;
+right:20px;
 width:55px;
 height:55px;
-border-radius:50%;
+background:#25d366;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:28px;
+border-radius:50%;
+font-size:26px;
 }
 
 /* RESPONSIVE */
 @media(max-width:900px){
-
-.hero{
-grid-template-columns:1fr;
-text-align:center;
-}
 
 .grid{
 grid-template-columns:1fr;
@@ -219,12 +237,12 @@ grid-template-columns:1fr;
 grid-template-columns:1fr 1fr;
 }
 
-.nav-links{
-display:none;
+.hero h1{
+font-size:34px;
 }
 
-.hero h1{
-font-size:36px;
+.nav-links{
+display:none;
 }
 
 }
@@ -238,7 +256,6 @@ grid-template-columns:1fr;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -260,21 +277,17 @@ Adverra
 </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO (NO IMAGE) -->
 <section class="hero">
 
-<div>
-<h1>We Build <span>Digital Brands</span> That Grow Fast</h1>
+<h1>We Build <span>Digital Growth</span> for Indian Brands</h1>
+
 <p>
-We help Indian businesses grow using social media, ads, content creation and websites.
+We help businesses grow with social media, ads, content creation, websites and branding.
+Focused on real results, not just design.
 </p>
 
-<a class="btn" href="#contact">Start Now</a>
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=1400&auto=format&fit=crop">
-</div>
+<a href="#contact" class="btn">Get Started</a>
 
 </section>
 
@@ -288,54 +301,169 @@ We help Indian businesses grow using social media, ads, content creation and web
 <div class="card">
 <i class="fab fa-instagram"></i>
 <h3>Social Media</h3>
-<p>Instagram & Facebook growth for Indian brands</p>
+<p>Instagram growth for Indian businesses</p>
 </div>
 
 <div class="card">
 <i class="fas fa-bullseye"></i>
-<h3>Ads</h3>
-<p>Meta & Google ads for leads & sales</p>
+<h3>Paid Ads</h3>
+<p>Meta & Google ads for leads and sales</p>
 </div>
 
 <div class="card">
 <i class="fas fa-camera"></i>
 <h3>Photography</h3>
-<p>Product & brand photos</p>
+<p>Product & brand photography</p>
 </div>
 
 <div class="card">
 <i class="fas fa-video"></i>
 <h3>Video Ads</h3>
-<p>Short reels & marketing videos</p>
+<p>Reels & marketing videos</p>
 </div>
 
 <div class="card">
 <i class="fas fa-laptop-code"></i>
 <h3>Websites</h3>
-<p>Modern business websites</p>
+<p>Fast modern business websites</p>
 </div>
 
 <div class="card">
 <i class="fas fa-chart-line"></i>
-<h3>Growth</h3>
-<p>Business strategy & analytics</p>
+<h3>Growth Strategy</h3>
+<p>Business analytics & planning</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- PORTFOLIO -->
+<!-- PORTFOLIO (20 INDIAN CLIENT PROJECTS) -->
 <section class="section" id="work">
 
-<div class="title">Our Work</div>
+<div class="title">Indian Client Projects</div>
 
 <div class="portfolio">
 
+<!-- 1 -->
+<div class="project">
 <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f">
+<div><h4>Ahmedabad Fashion Brand</h4><p>Instagram growth campaign</p></div>
+</div>
+
+<!-- 2 -->
+<div class="project">
 <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b">
+<div><h4>Mumbai Jewellery Store</h4><p>Product branding shoot</p></div>
+</div>
+
+<!-- 3 -->
+<div class="project">
 <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
+<div><h4>Delhi Startup Agency</h4><p>Meta ads lead generation</p></div>
+</div>
+
+<!-- 4 -->
+<div class="project">
 <img src="https://images.unsplash.com/photo-1521334884684-d80222895322">
+<div><h4>Bangalore Tech Company</h4><p>Website design</p></div>
+</div>
+
+<!-- 5 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div><h4>Rajkot Clothing Brand</h4><p>Social media content</p></div>
+</div>
+
+<!-- 6 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
+<div><h4>Pune Real Estate</h4><p>Video ads campaign</p></div>
+</div>
+
+<!-- 7 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+<div><h4>Surat Beauty Studio</h4><p>Instagram reels strategy</p></div>
+</div>
+
+<!-- 8 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+<div><h4>Hyderabad Restaurant</h4><p>Brand promotion ads</p></div>
+</div>
+
+<!-- 9 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+<div><h4>Indore Fashion Store</h4><p>Ecommerce growth</p></div>
+</div>
+
+<!-- 10 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+<div><h4>Goa Resort</h4><p>Tourism marketing</p></div>
+</div>
+
+<!-- 11 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+<div><h4>Chennai Agency</h4><p>Brand identity design</p></div>
+</div>
+
+<!-- 12 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<div><h4>Kolkata Business Firm</h4><p>Corporate website</p></div>
+</div>
+
+<!-- 13 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+<div><h4>Jaipur Jewellery Brand</h4><p>Luxury product ads</p></div>
+</div>
+
+<!-- 14 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<div><h4>Lucknow Startup</h4><p>Lead generation ads</p></div>
+</div>
+
+<!-- 15 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
+<div><h4>Noida IT Company</h4><p>Website UI design</p></div>
+</div>
+
+<!-- 16 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984">
+<div><h4>Nagpur Coaching Institute</h4><p>Social media ads</p></div>
+</div>
+
+<!-- 17 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4">
+<div><h4>Varanasi Local Brand</h4><p>Business growth system</p></div>
+</div>
+
+<!-- 18 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<div><h4>Bhopal Retail Store</h4><p>Brand marketing</p></div>
+</div>
+
+<!-- 19 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a">
+<div><h4>Gujarat Export Company</h4><p>Digital ads setup</p></div>
+</div>
+
+<!-- 20 -->
+<div class="project">
+<img src="https://images.unsplash.com/photo-1504384308090-1b0f6d2b0b1c">
+<div><h4>India Multi Brand Store</h4><p>Full digital marketing</p></div>
+</div>
 
 </div>
 
@@ -349,17 +477,14 @@ We help Indian businesses grow using social media, ads, content creation and web
 <h2>Contact Us</h2>
 
 <div class="numbers">
-
 <div class="number">+91 92135 25165</div>
 <div class="number">+91 92744 36018</div>
-
 </div>
 
 </div>
 
 </section>
 
-<!-- WHATSAPP -->
 <a class="wa" href="https://wa.me/919213525165">
 <i class="fab fa-whatsapp"></i>
 </a>
