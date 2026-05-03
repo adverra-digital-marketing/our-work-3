@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Adverra | Digital Growth Agency</title>
 
@@ -18,15 +19,12 @@
 
 :root{
     --bg:#050505;
-    --card:#101010;
+    --card:#111111;
     --text:#ffffff;
-    --gray:#bdbdbd;
+    --gray:#c7c7c7;
     --gold:#d4af37;
 
-    --shadow:
-    0 20px 80px rgba(0,0,0,0.45);
-
-    --transition:all .6s cubic-bezier(.16,1,.3,1);
+    --transition:all .5s ease;
 }
 
 *{
@@ -41,18 +39,9 @@ html{
 
 body{
     font-family:'Inter',sans-serif;
-
-    background:
-    radial-gradient(circle at top left, rgba(212,175,55,0.10), transparent 30%),
-    #050505;
-
-    color:var(--text);
-
+    background:#050505;
+    color:white;
     overflow-x:hidden;
-}
-
-a{
-    text-decoration:none;
 }
 
 img{
@@ -60,38 +49,37 @@ img{
     display:block;
 }
 
+a{
+    text-decoration:none;
+}
+
 /* HEADER */
 
 header{
     position:fixed;
-
-    top:16px;
+    top:15px;
     left:50%;
-
     transform:translateX(-50%);
-
     width:95%;
     max-width:1400px;
-
     z-index:9999;
 
     background:rgba(10,10,10,0.75);
-
     backdrop-filter:blur(18px);
 
     border:1px solid rgba(255,255,255,0.08);
 
-    border-radius:24px;
+    border-radius:22px;
 }
 
 nav{
-    height:78px;
+    height:74px;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    padding:0 24px;
+    padding:0 20px;
 }
 
 .nav-logo{
@@ -101,21 +89,21 @@ nav{
 }
 
 .nav-logo img{
-    width:46px;
-    height:46px;
+    width:44px;
+    height:44px;
     object-fit:cover;
-    border-radius:14px;
+    border-radius:12px;
 }
 
 .nav-logo span{
-    font-size:26px;
+    font-size:24px;
     font-weight:800;
     color:white;
 }
 
 .nav-links{
     display:flex;
-    gap:34px;
+    gap:30px;
 }
 
 .nav-links a{
@@ -125,11 +113,10 @@ nav{
 }
 
 .nav-btn{
-    padding:14px 24px;
-
+    padding:13px 22px;
     border-radius:999px;
 
-    background:linear-gradient(135deg,var(--gold),#f4d56b);
+    background:linear-gradient(135deg,var(--gold),#f6d777);
 
     color:#111;
 
@@ -139,8 +126,8 @@ nav{
 
 .menu-btn{
     display:none;
-    font-size:24px;
     color:white;
+    font-size:24px;
 }
 
 /* HERO */
@@ -150,23 +137,20 @@ nav{
 
     display:flex;
     align-items:center;
+    justify-content:center;
+
+    text-align:center;
 
     padding:180px 20px 120px;
+
+    background:
+    radial-gradient(circle at top left, rgba(212,175,55,0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 30%),
+    #050505;
 }
 
-.hero-grid{
-    max-width:1400px;
-
-    margin:auto;
-
-    width:100%;
-
-    display:grid;
-    grid-template-columns:1.1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
+.hero-content{
+    max-width:1000px;
 }
 
 .hero-badge{
@@ -182,22 +166,22 @@ nav{
 
     border:1px solid rgba(255,255,255,0.08);
 
-    margin-bottom:28px;
+    margin-bottom:30px;
 
     font-size:14px;
     font-weight:600;
 }
 
 .hero h1{
-    font-size:clamp(54px,8vw,115px);
+    font-size:clamp(52px,9vw,110px);
 
     line-height:0.95;
 
     font-weight:900;
 
-    letter-spacing:-0.06em;
-
     margin-bottom:28px;
+
+    letter-spacing:-0.06em;
 }
 
 .gold{
@@ -205,19 +189,20 @@ nav{
 }
 
 .hero p{
+    max-width:780px;
+
+    margin:auto auto 40px;
+
+    color:#d1d1d1;
+
     font-size:21px;
 
-    color:#d2d2d2;
-
     line-height:1.8;
-
-    max-width:700px;
-
-    margin-bottom:40px;
 }
 
 .cta-group{
     display:flex;
+    justify-content:center;
     gap:18px;
     flex-wrap:wrap;
 }
@@ -230,12 +215,12 @@ nav{
     font-size:15px;
     font-weight:700;
 
+    transition:var(--transition);
+
     display:inline-flex;
     align-items:center;
     justify-content:center;
     gap:10px;
-
-    transition:var(--transition);
 }
 
 .btn-primary{
@@ -252,50 +237,14 @@ nav{
 }
 
 .btn:hover{
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 }
 
-.hero-image img{
-    height:720px;
-
-    object-fit:cover;
-
-    border-radius:36px;
-
-    box-shadow:var(--shadow);
-}
-
-.hero-card{
-    position:relative;
-
-    margin-top:20px;
-
-    width:max-content;
-
-    background:rgba(255,255,255,0.06);
-
-    border:1px solid rgba(255,255,255,0.08);
-
-    padding:22px 28px;
-
-    border-radius:24px;
-}
-
-.hero-card h3{
-    font-size:42px;
-}
-
-.hero-card p{
-    font-size:14px;
-    margin:0;
-}
-
-/* SECTIONS */
+/* SECTION */
 
 section{
     max-width:1400px;
     margin:auto;
-
     padding:110px 20px;
 }
 
@@ -316,16 +265,15 @@ section{
 .grid-bento{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:26px;
+    gap:24px;
 }
 
 .bento-card{
-    background:rgba(255,255,255,0.05);
+    background:#111;
 
     border:1px solid rgba(255,255,255,0.08);
 
-    border-radius:32px;
+    border-radius:28px;
 
     padding:38px;
 
@@ -338,9 +286,7 @@ section{
 
 .bento-card i{
     font-size:40px;
-
     color:var(--gold);
-
     margin-bottom:22px;
 }
 
@@ -350,7 +296,7 @@ section{
 }
 
 .bento-card p{
-    color:#d1d1d1;
+    color:#d0d0d0;
     line-height:1.8;
 }
 
@@ -359,28 +305,25 @@ section{
 .portfolio-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-
     gap:22px;
 }
 
 .portfolio-card{
     position:relative;
 
-    overflow:hidden;
-
     border-radius:28px;
 
-    height:480px;
+    overflow:hidden;
 
     background:#111;
+
+    height:450px;
 }
 
 .portfolio-card img{
     width:100%;
     height:100%;
-
     object-fit:cover;
-
     transition:1s;
 }
 
@@ -396,7 +339,7 @@ section{
 
     width:100%;
 
-    padding:26px;
+    padding:24px;
 
     background:
     linear-gradient(0deg, rgba(0,0,0,0.95), transparent);
@@ -409,29 +352,29 @@ section{
 
 .portfolio-info p{
     font-size:14px;
-    color:#d8d8d8;
+    color:#d2d2d2;
 }
 
-/* QUOTE */
+/* TESTIMONIAL */
 
 .quote-section{
-    background:linear-gradient(135deg,#0e0e0e,#151515);
+    background:#101010;
 
-    border-radius:40px;
-
-    padding:120px 30px;
+    border-radius:36px;
 
     text-align:center;
+
+    padding:110px 25px;
 }
 
 .quote-text{
-    font-size:clamp(32px,4vw,56px);
+    font-size:clamp(30px,4vw,54px);
 
     font-weight:800;
 
-    line-height:1.3;
+    line-height:1.35;
 
-    max-width:1000px;
+    max-width:950px;
 
     margin:auto auto 30px;
 }
@@ -439,27 +382,26 @@ section{
 /* CONTACT */
 
 .contact-container{
-    background:linear-gradient(135deg,#101010,#161616);
+    background:#101010;
 
-    border-radius:40px;
-
-    padding:110px 30px;
+    border-radius:36px;
 
     text-align:center;
+
+    padding:110px 25px;
 }
 
 .contact-container h2{
-    font-size:clamp(42px,5vw,74px);
+    font-size:clamp(42px,5vw,72px);
 
     font-weight:900;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .contact-container p{
-    color:#d0d0d0;
-
     font-size:20px;
+    color:#d0d0d0;
 }
 
 .contact-numbers{
@@ -472,13 +414,13 @@ section{
 }
 
 .num-block{
-    background:rgba(255,255,255,0.05);
+    background:#161616;
 
     border:1px solid rgba(255,255,255,0.08);
 
-    border-radius:26px;
+    border-radius:24px;
 
-    padding:28px 34px;
+    padding:28px 32px;
 
     min-width:280px;
 }
@@ -492,10 +434,8 @@ section{
 
 footer{
     padding:60px 20px;
-
     text-align:center;
-
-    color:#bdbdbd;
+    color:#bcbcbc;
 }
 
 /* WHATSAPP */
@@ -506,8 +446,8 @@ footer{
     right:22px;
     bottom:22px;
 
-    width:72px;
-    height:72px;
+    width:70px;
+    height:70px;
 
     border-radius:50%;
 
@@ -522,11 +462,9 @@ footer{
     font-size:34px;
 
     z-index:9999;
-
-    box-shadow:0 20px 50px rgba(37,211,102,0.4);
 }
 
-/* REVEAL */
+/* ANIMATION */
 
 .reveal{
     opacity:0;
@@ -543,16 +481,8 @@ footer{
 
 @media(max-width:1100px){
 
-    .hero-grid{
-        grid-template-columns:1fr;
-    }
-
     .portfolio-grid{
         grid-template-columns:repeat(2,1fr);
-    }
-
-    .hero-image img{
-        height:560px;
     }
 
 }
@@ -569,11 +499,11 @@ footer{
     }
 
     nav{
-        padding:0 18px;
+        padding:0 16px;
     }
 
     .hero{
-        padding-top:140px;
+        padding-top:150px;
     }
 
     .hero h1{
@@ -584,20 +514,20 @@ footer{
         font-size:18px;
     }
 
-    .hero-image img{
-        height:420px;
-    }
-
-    .portfolio-grid{
-        grid-template-columns:1fr;
-    }
-
     .cta-group{
         flex-direction:column;
     }
 
     .btn{
         width:100%;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .portfolio-card{
+        height:400px;
     }
 
     .contact-container p{
@@ -648,8 +578,6 @@ Book Call
 
 <section class="hero">
 
-<div class="hero-grid">
-
 <div class="hero-content reveal">
 
 <div class="hero-badge">
@@ -661,13 +589,13 @@ India's Digital Growth Agency
 </div>
 
 <h1>
-We Grow <span class="gold">Modern</span><br>
+We Build <span class="gold">Modern</span><br>
 Indian Brands.
 </h1>
 
 <p>
-Adverra creates high-performing websites, social campaigns,
-content production and growth systems for ambitious Indian businesses.
+Adverra creates websites, social media campaigns,
+branding content and digital growth systems for ambitious Indian businesses.
 </p>
 
 <div class="cta-group">
@@ -683,22 +611,6 @@ View Strategy
 <i class="fas fa-arrow-right"></i>
 
 </a>
-
-</div>
-
-</div>
-
-<div class="hero-image reveal">
-
-<img src="https://images.unsplash.com/photo-1609386467018-f355a0dd7f8c?q=80&w=1400&auto=format&fit=crop">
-
-<div class="hero-card">
-
-<h3>400%</h3>
-
-<p>Average Business Growth</p>
-
-</div>
 
 </div>
 
@@ -723,7 +635,7 @@ What We Do
 <h3>Social Media</h3>
 
 <p>
-Instagram reels, content systems and branding that helps Indian businesses grow online.
+Instagram reels, content systems and branding that help Indian businesses grow online.
 </p>
 
 </div>
@@ -735,7 +647,7 @@ Instagram reels, content systems and branding that helps Indian businesses grow 
 <h3>Performance Ads</h3>
 
 <p>
-Meta and Google ad campaigns focused on leads, sales and business growth.
+Meta and Google ad campaigns focused on leads, conversions and business growth.
 </p>
 
 </div>
@@ -771,7 +683,7 @@ Modern short-form videos and ad creatives designed for maximum engagement.
 <h3>Websites</h3>
 
 <p>
-Fast modern websites with premium UI/UX and mobile-friendly design.
+Fast websites with modern UI/UX and fully mobile-friendly design.
 </p>
 
 </div>
@@ -783,7 +695,7 @@ Fast modern websites with premium UI/UX and mobile-friendly design.
 <h3>Growth Systems</h3>
 
 <p>
-Analytics, funnels and automation systems that improve conversions and scaling.
+Analytics, automation and funnels that improve conversions and scaling.
 </p>
 
 </div>
@@ -832,13 +744,13 @@ Recent Projects
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1578898887932-dce23a595ad4?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Hotel Campaign</h4>
+<h4>Restaurant Campaign</h4>
 
-<p>Digital Strategy</p>
+<p>Digital Branding</p>
 
 </div>
 
@@ -846,13 +758,13 @@ Recent Projects
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Resort Branding</h4>
+<h4>Resort Marketing</h4>
 
-<p>Hospitality Marketing</p>
+<p>Hospitality Campaign</p>
 
 </div>
 
@@ -864,9 +776,9 @@ Recent Projects
 
 <div class="portfolio-info">
 
-<h4>Business Campaign</h4>
+<h4>Corporate Brand</h4>
 
-<p>Brand Growth</p>
+<p>Business Growth</p>
 
 </div>
 
@@ -923,7 +835,7 @@ Recent Projects
 <section class="quote-section reveal">
 
 <p class="quote-text">
-“Adverra completely transformed our online presence.
+“Adverra transformed our online presence.
 The branding, content and campaigns helped us grow faster than expected.”
 </p>
 
@@ -1023,4 +935,5 @@ observer.observe(el);
 </script>
 
 </body>
+
 </html>
