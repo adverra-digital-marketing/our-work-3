@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adverra | Luxury Digital Growth Agency</title>
+<title>Adverra | Digital Growth Agency</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
     --bg:#060606;
     --card:#111111;
     --text:#ffffff;
-    --gray:#b6b6b6;
+    --gray:#bdbdbd;
     --gold:#d4af37;
     --blue:#2563eb;
 
@@ -44,6 +44,7 @@ html{
 
 body{
     font-family:'Inter',sans-serif;
+
     background:
     radial-gradient(circle at top left, rgba(37,99,235,0.18), transparent 30%),
     radial-gradient(circle at top right, rgba(212,175,55,0.14), transparent 30%),
@@ -80,10 +81,9 @@ header{
 
     z-index:9999;
 
-    background:rgba(15,15,15,0.65);
+    background:rgba(15,15,15,0.68);
 
     backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
 
     border:1px solid rgba(255,255,255,0.08);
 
@@ -116,8 +116,8 @@ nav{
 .nav-logo span{
     font-size:26px;
     font-weight:800;
-    letter-spacing:-1px;
     color:white;
+    letter-spacing:-1px;
 }
 
 .nav-links{
@@ -157,7 +157,7 @@ nav{
 
     border-radius:999px;
 
-    background:linear-gradient(135deg,var(--gold),#f5d778);
+    background:linear-gradient(135deg,var(--gold),#f7d978);
 
     color:#111;
 
@@ -217,7 +217,7 @@ nav{
     height:700px;
 
     background:
-    radial-gradient(circle, rgba(212,175,55,0.18), transparent 70%);
+    radial-gradient(circle, rgba(212,175,55,0.16), transparent 70%);
 
     right:-250px;
     top:-250px;
@@ -253,12 +253,10 @@ nav{
     font-weight:600;
 
     margin-bottom:30px;
-
-    backdrop-filter:blur(20px);
 }
 
 .hero h1{
-    font-size:clamp(56px,8vw,120px);
+    font-size:clamp(56px,8vw,118px);
 
     line-height:0.92;
 
@@ -266,7 +264,7 @@ nav{
 
     letter-spacing:-0.08em;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 }
 
 .gold{
@@ -276,7 +274,7 @@ nav{
 .hero p{
     font-size:22px;
 
-    color:#cfcfcf;
+    color:#d1d1d1;
 
     line-height:1.8;
 
@@ -307,7 +305,8 @@ nav{
 }
 
 .btn-primary{
-    background:linear-gradient(135deg,var(--gold),#f6d777);
+    background:linear-gradient(135deg,var(--gold),#f5d777);
+
     color:#111;
 
     box-shadow:
@@ -324,8 +323,6 @@ nav{
     color:white;
 
     border:1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(20px);
 }
 
 .btn-secondary:hover{
@@ -352,15 +349,15 @@ nav{
     bottom:30px;
     left:-40px;
 
-    background:rgba(15,15,15,0.78);
-
-    backdrop-filter:blur(20px);
+    background:rgba(15,15,15,0.82);
 
     border:1px solid rgba(255,255,255,0.08);
 
     border-radius:26px;
 
     padding:24px 28px;
+
+    backdrop-filter:blur(20px);
 
     box-shadow:var(--shadow);
 }
@@ -371,9 +368,8 @@ nav{
 }
 
 .hero-card p{
-    font-size:14px;
     margin:0;
-    color:#d5d5d5;
+    font-size:14px;
 }
 
 /* SECTIONS */
@@ -407,34 +403,33 @@ section{
 }
 
 .bento-card{
-    position:relative;
-
     background:rgba(255,255,255,0.05);
 
     border:1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(20px);
 
     border-radius:34px;
 
     padding:42px;
 
-    overflow:hidden;
-
     transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
 }
 
 .bento-card:hover{
     transform:translateY(-10px);
+
     border-color:rgba(212,175,55,0.35);
 }
 
 .bento-card i{
     font-size:42px;
 
-    margin-bottom:24px;
-
     color:var(--gold);
+
+    margin-bottom:24px;
 }
 
 .bento-card h3{
@@ -443,7 +438,7 @@ section{
 }
 
 .bento-card p{
-    color:#cfcfcf;
+    color:#d0d0d0;
 
     line-height:1.8;
 }
@@ -466,9 +461,9 @@ section{
 
     height:520px;
 
-    cursor:pointer;
-
     box-shadow:var(--shadow);
+
+    cursor:pointer;
 }
 
 .portfolio-card img{
@@ -559,10 +554,6 @@ section{
 /* CONTACT */
 
 .contact-container{
-    position:relative;
-
-    overflow:hidden;
-
     background:
     linear-gradient(135deg,#101010,#171717);
 
@@ -573,21 +564,6 @@ section{
     text-align:center;
 
     border:1px solid rgba(255,255,255,0.08);
-}
-
-.contact-container::before{
-    content:'';
-
-    position:absolute;
-
-    width:500px;
-    height:500px;
-
-    background:
-    radial-gradient(circle, rgba(37,99,235,0.18), transparent 70%);
-
-    top:-250px;
-    left:-150px;
 }
 
 .contact-container h2{
@@ -622,7 +598,7 @@ section{
 
     border-radius:28px;
 
-    padding:30px 38px;
+    padding:34px 40px;
 
     min-width:290px;
 
@@ -631,21 +607,12 @@ section{
 
 .num-block:hover{
     transform:translateY(-8px);
+
     border-color:rgba(212,175,55,0.35);
 }
 
-.num-block span{
-    display:block;
-
-    color:#cfcfcf;
-
-    margin-bottom:10px;
-
-    font-size:14px;
-}
-
 .num-block strong{
-    font-size:28px;
+    font-size:30px;
 
     color:white;
 }
@@ -798,7 +765,7 @@ footer{
 <div class="nav-links">
 
 <a href="#services">Expertise</a>
-<a href="#portfolio">Stories</a>
+<a href="#portfolio">Work</a>
 <a href="#contact">Contact</a>
 
 </div>
@@ -825,21 +792,21 @@ Book Consultation
 
 <div class="hero-badge">
 
-<i class="fas fa-crown"></i>
+<i class="fas fa-star"></i>
 
-India's Luxury Growth Agency
+Creative Growth Agency
 
 </div>
 
 <h1>
-We Build <span class="gold">Luxury</span><br>
+We Build <span class="gold">Modern</span><br>
 Digital Brands.
 </h1>
 
 <p>
-Adverra creates world-class digital experiences,
-viral social campaigns, premium visuals and
-high-converting growth systems for ambitious Indian brands.
+Adverra helps ambitious Indian businesses grow through
+creative campaigns, social media, performance marketing,
+premium visuals and modern digital experiences.
 </p>
 
 <div class="cta-group">
@@ -850,7 +817,7 @@ Start Your Growth
 
 <a href="https://wa.me/919213525165" class="btn btn-secondary">
 
-View Strategy
+View Services
 
 <i class="fas fa-arrow-right"></i>
 
@@ -862,7 +829,7 @@ View Strategy
 
 <div class="hero-image reveal">
 
-<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1604072366595-e75dc92d6bdc?q=80&w=1400&auto=format&fit=crop">
 
 <div class="hero-card">
 
@@ -883,7 +850,7 @@ View Strategy
 <section id="services">
 
 <h2 class="section-title reveal">
-Premium Services.
+What We Do.
 </h2>
 
 <div class="grid-bento">
@@ -895,7 +862,7 @@ Premium Services.
 <h3>Social Media</h3>
 
 <p>
-Luxury content systems designed to dominate Instagram and modern attention platforms.
+Creative content and social media strategies designed to grow engagement and brand presence.
 </p>
 
 </div>
@@ -907,7 +874,7 @@ Luxury content systems designed to dominate Instagram and modern attention platf
 <h3>Paid Advertising</h3>
 
 <p>
-Meta and Google performance campaigns engineered for maximum profitable scaling.
+High-converting Meta and Google advertising campaigns focused on real business growth.
 </p>
 
 </div>
@@ -916,10 +883,10 @@ Meta and Google performance campaigns engineered for maximum profitable scaling.
 
 <i class="fas fa-camera"></i>
 
-<h3>Luxury Shoots</h3>
+<h3>Brand Shoots</h3>
 
 <p>
-Premium product photography and cinematic visuals crafted for elite branding.
+Professional product photography and commercial visuals tailored for modern brands.
 </p>
 
 </div>
@@ -931,7 +898,7 @@ Premium product photography and cinematic visuals crafted for elite branding.
 <h3>Video Production</h3>
 
 <p>
-High-end ad films and viral short-form content with luxury visual storytelling.
+Short-form reels, ad films and cinematic videos built for attention and reach.
 </p>
 
 </div>
@@ -940,10 +907,10 @@ High-end ad films and viral short-form content with luxury visual storytelling.
 
 <i class="fas fa-laptop-code"></i>
 
-<h3>Luxury Websites</h3>
+<h3>Website Design</h3>
 
 <p>
-High-converting modern websites with premium UI/UX and lightning-fast performance.
+Modern responsive websites with premium UI/UX and conversion-focused layouts.
 </p>
 
 </div>
@@ -952,10 +919,10 @@ High-converting modern websites with premium UI/UX and lightning-fast performanc
 
 <i class="fas fa-chart-line"></i>
 
-<h3>Growth Systems</h3>
+<h3>Growth Strategy</h3>
 
 <p>
-Advanced analytics and conversion systems optimized for aggressive business growth.
+Data-driven marketing systems to scale businesses faster and smarter.
 </p>
 
 </div>
@@ -969,20 +936,20 @@ Advanced analytics and conversion systems optimized for aggressive business grow
 <section id="portfolio">
 
 <h2 class="section-title reveal">
-Luxury Success Stories.
+Recent Projects.
 </h2>
 
 <div class="portfolio-grid">
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Luxury Fashion</h4>
+<h4>Fashion Brand</h4>
 
-<p>Instagram Growth Campaign</p>
+<p>Instagram Campaign</p>
 
 </div>
 
@@ -990,13 +957,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Jewellery Branding</h4>
+<h4>Jewellery Shoot</h4>
 
-<p>Luxury Photo Production</p>
+<p>Brand Photography</p>
 
 </div>
 
@@ -1004,13 +971,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Corporate Campaign</h4>
+<h4>Corporate Media</h4>
 
-<p>Digital Strategy & Ads</p>
+<p>Business Campaign</p>
 
 </div>
 
@@ -1018,11 +985,11 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Luxury Resorts</h4>
+<h4>Hotel Branding</h4>
 
 <p>Hospitality Marketing</p>
 
@@ -1032,13 +999,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Premium Apparel</h4>
+<h4>Clothing Campaign</h4>
 
-<p>Fashion Brand Growth</p>
+<p>Fashion Promotion</p>
 
 </div>
 
@@ -1046,13 +1013,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Luxury Real Estate</h4>
+<h4>Interior Studio</h4>
 
-<p>High-End Visual Campaign</p>
+<p>Visual Branding</p>
 
 </div>
 
@@ -1060,13 +1027,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Interior Branding</h4>
+<h4>Startup Marketing</h4>
 
-<p>Luxury Space Marketing</p>
+<p>Growth Strategy</p>
 
 </div>
 
@@ -1074,13 +1041,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Beauty Campaign</h4>
+<h4>Beauty Brand</h4>
 
-<p>Premium Social Media</p>
+<p>Social Media Campaign</p>
 
 </div>
 
@@ -1095,12 +1062,12 @@ Luxury Success Stories.
 <section class="quote-section reveal">
 
 <p class="quote-text">
-“Adverra transformed our brand into a luxury digital powerhouse.
-The quality, aesthetics and growth were beyond expectations.”
+“Adverra completely transformed our online presence.
+The content, branding and campaigns delivered incredible results.”
 </p>
 
 <p style="margin-top:20px;color:#d2d2d2;font-size:18px;">
-— Founder, Luxury Fashion Brand
+— Founder, Fashion Brand
 </p>
 
 </section>
@@ -1112,26 +1079,22 @@ The quality, aesthetics and growth were beyond expectations.”
 <div class="contact-container reveal">
 
 <h2>
-Let’s Build Something Iconic.
+Let’s Build Something Amazing.
 </h2>
 
 <p>
-Direct access to Adverra growth strategists.
+Talk directly with our team.
 </p>
 
 <div class="contact-numbers">
 
 <a href="tel:+919213525165" class="num-block">
 
-<span>Strategic Partnerships</span>
-
 <strong>+91 92135 25165</strong>
 
 </a>
 
 <a href="tel:+919274436018" class="num-block">
-
-<span>Account Management</span>
 
 <strong>+91 92744 36018</strong>
 
@@ -1142,11 +1105,11 @@ Direct access to Adverra growth strategists.
 <div class="cta-group">
 
 <a href="https://wa.me/919213525165" class="btn btn-primary">
-WhatsApp Strategy 1
+WhatsApp Us
 </a>
 
 <a href="https://wa.me/919274436018" class="btn btn-secondary">
-WhatsApp Strategy 2
+Talk With Team
 </a>
 
 </div>
