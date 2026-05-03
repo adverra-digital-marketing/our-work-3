@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,321 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adverra | Digital Growth for Indian Businesses</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@0.321.0"></script>
+
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #020202;
-            color: #ffffff;
-            scroll-behavior: smooth;
-        }
-
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .glass-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-gradient {
-            background: 
-                radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.2) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
-        }
-
-        .accent-text {
-            background: linear-gradient(to right, #fff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-        .skeleton {
-            background: linear-gradient(90deg, #111 25%, #222 50%, #111 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite;
-        }
-
-        .img-overlay {
-            background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 40%, transparent 100%);
-        }
-
-        .wa-btn {
-            background: linear-gradient(135deg, #25D366 0%, #075E54 100%);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.3);
-        }
-
-        .portfolio-img {
-            transition: transform 1.2s ease, filter 0.8s ease;
-            opacity: 0;
-        }
-        .portfolio-img.loaded {
-            opacity: 1;
-        }
-        .glass-card:hover .portfolio-img {
-            transform: scale(1.1);
-        }
+        body { font-family: 'Inter', sans-serif; background:#020202; color:#fff; }
+        .glass { background:rgba(255,255,255,0.03); backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.1); }
+        .glass-card { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); }
+        .img-overlay { background:linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,0.4),transparent); }
     </style>
 </head>
-<body class="overflow-x-hidden">
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 glass px-6 py-4 flex justify-between items-center border-b border-white/5 z-[1000]">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-white/10">
-                <span class="text-black font-black text-2xl">A</span>
-            </div>
-            <span class="text-2xl font-black tracking-tighter text-white">ADVERRA</span>
-        </div>
-        <nav class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
-            <a href="#services" class="hover:text-white transition-colors">Services</a>
-            <a href="#work" class="hover:text-white transition-colors">Portfolio</a>
-            <a href="#contact" class="hover:text-white transition-colors">Contact</a>
-        </nav>
-        <a href="#contact" class="text-xs md:text-sm font-black bg-white text-black px-6 py-2.5 rounded-full hover:scale-105 transition-all">Start Now</a>
-    </header>
+<body>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 pb-20 hero-gradient">
-        <div class="inline-flex items-center gap-2 px-5 py-2 mb-8 glass rounded-full border border-white/10 text-[10px] font-black tracking-[0.2em] text-blue-400 uppercase">
-            <span class="w-2 h-2 bg-blue-500 rounded-full animate-ping"></span>
-            India's Premium Digital Agency
-        </div>
-        <h1 class="text-6xl md:text-8xl lg:text-[10rem] font-black leading-[0.85] max-w-7xl mb-12 tracking-tighter accent-text">
-            DOMINATE THE <br><span class="opacity-40 italic">INDIAN</span> MARKET
-        </h1>
-        <p class="text-gray-300 text-lg md:text-2xl max-w-3xl mb-14 font-medium leading-relaxed">
-            Scalable performance marketing and AI-driven creativity for the next generation of Indian enterprises.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-6">
-            <a href="#work" class="bg-white text-black px-14 py-5 rounded-2xl font-black text-xl hover:shadow-[0_0_50px_rgba(255,255,255,0.2)] transition-all">
-                See Our Impact
-            </a>
-            <a href="#contact" class="glass px-14 py-5 rounded-2xl font-black text-xl hover:bg-white/10 transition-all border border-white/20">
-                Book a Strategy
-            </a>
-        </div>
-    </section>
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 glass px-6 py-4 flex justify-between items-center z-50">
 
-    <!-- Services Section -->
-    <section id="services" class="px-6 py-32 max-w-7xl mx-auto">
-        <div class="mb-24 text-center">
-            <h2 class="text-4xl md:text-7xl font-black mb-8 tracking-tighter uppercase">Our <span class="text-blue-500">Expertise</span></h2>
-            <div class="w-24 h-2 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+    <!-- LOGO FIX -->
+    <div class="flex items-center gap-3">
+        <img src="assets/logo.png" 
+             onerror="this.src='https://via.placeholder.com/80x80?text=ADVERRA'"
+             class="w-10 h-10 rounded-xl object-cover" />
+        <span class="text-xl font-black">ADVERRA</span>
+    </div>
+
+    <nav class="hidden md:flex gap-8 text-gray-400 font-bold text-sm">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="bg-white text-black px-5 py-2 rounded-full font-bold text-sm">Start</a>
+</header>
+
+
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
+    <h1 class="text-5xl md:text-7xl font-black">DOMINATE INDIAN MARKET</h1>
+    <p class="text-gray-400 mt-6 max-w-xl">
+        AI driven marketing for Indian businesses
+    </p>
+</section>
+
+
+<!-- SERVICES -->
+<section class="px-6 py-20">
+    <h2 class="text-4xl font-black text-center mb-12">Our Services</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="glass-card p-8 rounded-3xl">
+            Social Media Growth for India
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="glass-card p-12 rounded-[3rem]">
-                <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-10 border border-blue-400/30">
-                    <i data-lucide="instagram" class="w-8 h-8 text-blue-400"></i>
-                </div>
-                <h3 class="text-3xl font-black mb-6">Social Media</h3>
-                <p class="text-gray-400 text-lg leading-relaxed font-medium">Virality by design. We create culture-inspired content that breaks the algorithm.</p>
-            </div>
-            <div class="glass-card p-12 rounded-[3rem]">
-                <div class="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center mb-10 border border-pink-400/30">
-                    <i data-lucide="zap" class="w-8 h-8 text-pink-400"></i>
-                </div>
-                <h3 class="text-3xl font-black mb-6">Performance Ads</h3>
-                <p class="text-gray-400 text-lg leading-relaxed font-medium">Hyper-targeted Meta & Google ads optimized for Indian consumer behavior.</p>
-            </div>
-            <div class="glass-card p-12 rounded-[3rem]">
-                <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-10 border border-amber-400/30">
-                    <i data-lucide="camera" class="w-8 h-8 text-amber-400"></i>
-                </div>
-                <h3 class="text-3xl font-black mb-6">Production</h3>
-                <p class="text-gray-400 text-lg leading-relaxed font-medium">Visual storytelling produced to capture attention within 3 seconds of a scroll.</p>
-            </div>
+        <div class="glass-card p-8 rounded-3xl">
+            Meta + Google Ads India Focus
         </div>
-    </section>
 
-    <!-- Work Section -->
-    <section id="work" class="px-6 py-32 bg-white/[0.01]">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-24">
-                <h2 class="text-5xl md:text-8xl font-black mb-8 tracking-tighter">Strictly <span class="opacity-20 italic">AI Powered</span></h2>
-                <p class="text-gray-400 text-xl font-semibold">Generating visual proof for 20 diverse Indian industries.</p>
-            </div>
-
-            <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Skeletons will be replaced by AI images sequentially -->
-            </div>
+        <div class="glass-card p-8 rounded-3xl">
+            Indian Brand Video Production
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="px-6 py-32 max-w-6xl mx-auto">
-        <div class="glass p-12 md:p-32 rounded-[3rem] md:rounded-[5rem] text-center relative overflow-hidden group border border-white/10">
-            <div class="absolute -top-60 -right-60 w-[30rem] h-[30rem] bg-blue-600/10 blur-[120px] rounded-full"></div>
-            
-            <h2 class="text-5xl md:text-9xl font-black mb-8 md:mb-12 tracking-tighter leading-[0.85]">Let's <span class="text-white/40">Scale</span> Your Vision</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16 max-w-4xl mx-auto">
-                <a href="tel:+919213525165" class="glass-card p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center hover:bg-blue-500/10 active:scale-95 transition-all">
-                    <i data-lucide="phone" class="w-8 h-8 md:w-10 md:h-10 mb-3 md:mb-4 text-blue-400"></i>
-                    <span class="text-xl md:text-3xl font-black tracking-tighter whitespace-nowrap">+91 92135 25165</span>
-                </a>
-                <a href="tel:+919274436018" class="glass-card p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center hover:bg-purple-500/10 active:scale-95 transition-all">
-                    <i data-lucide="phone-call" class="w-8 h-8 md:w-10 md:h-10 mb-3 md:mb-4 text-purple-400"></i>
-                    <span class="text-xl md:text-3xl font-black tracking-tighter whitespace-nowrap">+91 92744 36018</span>
-                </a>
-            </div>
+    </div>
+</section>
 
-            <a href="https://wa.me/919213525165" target="_blank" class="wa-btn inline-flex items-center gap-4 md:gap-6 text-white px-10 md:px-16 py-5 md:py-7 rounded-2xl md:rounded-3xl font-black text-xl md:text-2xl hover:scale-105 transition-all active:scale-95 shadow-xl">
-                <i data-lucide="message-circle" class="w-8 h-8 md:w-10 md:h-10"></i>
-                Start on WhatsApp
-            </a>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="px-6 py-24 border-t border-white/5 bg-black">
-        <div class="max-w-7xl mx-auto flex flex-col items-center">
-            <div class="flex items-center gap-4 mb-12">
-                <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center">
-                    <span class="text-black font-black text-3xl">A</span>
-                </div>
-                <span class="text-white font-black text-5xl tracking-tighter uppercase">ADVERRA</span>
-            </div>
-            <div class="flex flex-col md:flex-row justify-between items-center w-full gap-8 border-t border-white/5 pt-12">
-                <p class="text-gray-600 font-bold text-xs uppercase tracking-widest">&copy; 2024 Adverra Agency</p>
-                <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-gray-500 font-black text-xs uppercase tracking-widest">
-                    <a href="#services" class="hover:text-white">Services</a>
-                    <a href="#work" class="hover:text-white">Work</a>
-                    <a href="#contact" class="hover:text-white">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+<!-- WORK -->
+<section id="work" class="px-6 py-20">
+    <h2 class="text-4xl font-black text-center mb-12">Indian Client Work</h2>
 
-    <script>
-        const apiKey = ""; // Set by runtime
+    <div id="grid" class="grid md:grid-cols-4 gap-6"></div>
+</section>
 
-        const projects = [
-            { client: "Vastra Ethnic Wear", result: "Fashion Sales Scaled", prompt: "A cinematic professional photo of a vibrant Indian ethnic wear boutique interior, colorful silk fabrics, Indian shop owner in saree, luxury atmosphere, high resolution." },
-            { client: "Kundan Jewelry", result: "Premium Brand Launch", prompt: "Close up high-end photography of traditional Indian gold jewelry on velvet, colorful lighting, blurry jewelry store background, 8k resolution." },
-            { client: "Nirman Realty", result: "Real Estate Leads Growth", prompt: "A modern luxury Indian apartment building exterior at sunset, vibrant colorful sky, Indian family smiling in foreground, professional photography." },
-            { client: "Dawat Fine Dining", result: "Influencer Content Strategy", prompt: "A colorful high-end Indian restaurant interior, beautifully plated Indian thali, vibrant spices, professional food photography." },
-            { client: "Vocal Retail Hub", result: "Footfall Scale Campaign", prompt: "A busy colorful modern Indian lifestyle store interior, many Indian shoppers browsing, bright premium lighting, professional retail environment." },
-            { client: "Roop Makeover", result: "Salon Ads Automation", prompt: "A professional colorful Indian beauty salon interior, an Indian woman getting a makeover, vibrant cosmetic products, premium lighting." },
-            { client: "Shiksha Academy", result: "Enrollment Drive Success", prompt: "Group of happy Indian students in a modern colorful university campus, bright sunlight, diverse Indian faces, high-resolution photography." },
-            { client: "Padharo Hotels", result: "Hospitality Brand Video", prompt: "A luxury colorful Indian heritage hotel lobby, vibrant Rajasthan traditional decor, smiling Indian staff, premium hospitality photography." },
-            { client: "Riva Fashion House", result: "E-com Visual Strategy", prompt: "An Indian fashion model posing in a vibrant colorful designer outfit, studio lighting, professional fashion photography, high-end look." },
-            { client: "Bharat D2C Store", result: "Logistics Optimization", prompt: "A modern colorful warehouse office in India, Indian entrepreneurs looking at computer screens, vibrant business photography." },
-            { client: "Daksh IT Hub", result: "SaaS Lead Generation", prompt: "A modern colorful Indian tech office interior, group of Indian developers in a meeting, vibrant glass walls, corporate photography." },
-            { client: "Navoday Startups", result: "Brand Seed Positioning", prompt: "An Indian entrepreneur pitching in a colorful modern startup hub, diverse Indian team, vibrant lighting, professional business setting." },
-            { client: "Sanjeevan Coaching", result: "Ads & Sales Automation", prompt: "A professional Indian educator filming a video in a colorful high-tech studio with digital board, bright lighting, education technology theme." },
-            { client: "Shakti Fitness", result: "Gym Transformation Ads", prompt: "A modern colorful Indian fitness gym interior, Indian people working out, vibrant equipment, cinematic fitness photography." },
-            { client: "Manthan Corporate", result: "B2B PR & Reputation", prompt: "A premium colorful Indian corporate boardroom, Indian executives in sharp suits, sunset city view through large windows." },
-            { client: "Loha Mfg India", result: "Industrial Export Leads", prompt: "A clean modern Indian factory floor, vibrant machines, Indian engineers in helmets, professional industrial photography." },
-            { client: "Niryat Global", result: "Global Scale Strategy", prompt: "An Indian shipping port with colorful containers, Indian logistics professional in foreground, bright daylight, global trade theme." },
-            { client: "Kosh Finance", result: "App Install Growth", prompt: "A professional Indian financial consultant in a colorful office explaining a graph to a client, vibrant atmosphere, growth theme." },
-            { client: "Sundari Beauty", result: "Product Launch Visuals", prompt: "Indian beauty products like oils arranged beautifully with colorful Indian flowers, bright natural lighting, professional photography." },
-            { client: "Sahayta Services", result: "Local SEO Dominance", prompt: "A colorful modern Indian customer service center, Indian professionals with headsets smiling, vibrant office culture." }
-        ];
 
-        async function fetchWithRetry(url, options, retries = 5, delay = 1000) {
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(url, options);
-                    if (response.ok) return await response.json();
-                    if (response.status !== 429 && response.status < 500) break;
-                } catch (e) {}
-                await new Promise(res => setTimeout(res, delay));
-                delay *= 2;
-            }
-            throw new Error("Generation failed");
-        }
+<!-- FOOTER -->
+<footer class="text-center py-10 border-t border-white/10">
 
-        async function generateAIImage(promptText) {
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`;
-            const options = {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    instances: [{ prompt: promptText }],
-                    parameters: { sampleCount: 1 }
-                })
-            };
-            
-            try {
-                const result = await fetchWithRetry(url, options);
-                return `data:image/png;base64,${result.predictions[0].bytesBase64Encoded}`;
-            } catch (err) {
-                return null;
-            }
-        }
+    <img src="assets/logo.png"
+         onerror="this.src='https://via.placeholder.com/80x80?text=ADVERRA'"
+         class="w-12 mx-auto mb-4 rounded-xl">
 
-        async function initPortfolio() {
-            const grid = document.getElementById('portfolio-grid');
-            grid.innerHTML = '';
-            
-            // Render Skeletons
-            projects.forEach((p, idx) => {
-                const card = document.createElement('div');
-                card.id = `card-${idx}`;
-                card.className = 'relative group overflow-hidden rounded-[3rem] aspect-[4/5] glass-card';
-                card.innerHTML = `
-                    <div class="skeleton w-full h-full"></div>
-                    <div class="absolute inset-0 img-overlay flex flex-col justify-end p-10">
-                        <h4 class="text-2xl font-black text-white mb-2">${p.client}</h4>
-                        <p class="text-white/60 text-sm font-bold">${p.result}</p>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
+    <p class="text-gray-500">© 2026 Adverra India</p>
+</footer>
 
-            // Sequential generation to avoid rate limits
-            for (let i = 0; i < projects.length; i++) {
-                const p = projects[i];
-                const card = document.getElementById(`card-${i}`);
-                
-                const aiImg = await generateAIImage(p.prompt);
-                const imgSrc = aiImg || `https://images.unsplash.com/photo-1524492459426-030ec60872ec?auto=format&fit=crop&q=80&w=600`;
 
-                card.innerHTML = `
-                    <img src="${imgSrc}" alt="${p.client}" class="portfolio-img w-full h-full object-cover transition-opacity duration-1000">
-                    <div class="absolute inset-0 img-overlay flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                        <div class="mb-4 w-12 h-1 bg-blue-500 rounded-full group-hover:w-full transition-all duration-700"></div>
-                        <h4 class="text-2xl font-black text-white mb-2 leading-tight">${p.client}</h4>
-                        <p class="text-blue-300 text-sm font-bold tracking-tight">${p.result}</p>
-                    </div>
-                `;
-                
-                const imgElement = card.querySelector('.portfolio-img');
-                imgElement.onload = () => imgElement.classList.add('loaded');
-                // Force a small delay between requests to ensure success
-                await new Promise(r => setTimeout(r, 200)); 
-            }
-        }
+<script>
+const projects = [
+    { name:"Fashion India", img:"fashion" },
+    { name:"Jewellery India", img:"gold,jewelry,india" },
+    { name:"Real Estate India", img:"india,building,luxury" },
+    { name:"Restaurant India", img:"india,food,restaurant" },
+    { name:"Startup India", img:"india,office,startup" },
+    { name:"Education India", img:"india,students,school" },
+    { name:"Gym India", img:"india,gym,fitness" },
+    { name:"Hospital India", img:"india,hospital,medical" }
+];
 
-        window.onload = function() {
-            lucide.createIcons();
-            initPortfolio();
-        };
-    </script>
+const grid = document.getElementById("grid");
+
+projects.forEach(p=>{
+    grid.innerHTML += `
+    <div class="glass-card rounded-3xl overflow-hidden">
+        <img src="https://source.unsplash.com/600x800/?${p.img}"
+             class="w-full h-64 object-cover">
+        <div class="p-4 font-bold">${p.name}</div>
+    </div>`;
+});
+</script>
+
 </body>
 </html>
-
-```
