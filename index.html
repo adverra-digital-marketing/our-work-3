@@ -17,30 +17,21 @@
 
 <style>
 
-:root{
-    --bg:#050505;
-    --card:#111111;
-    --text:#ffffff;
-    --gray:#c7c7c7;
-    --gold:#d4af37;
-    --transition:all .5s ease;
-}
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
     font-family:'Inter',sans-serif;
     background:#050505;
-    color:white;
+    color:#fff;
     overflow-x:hidden;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 img{
@@ -52,57 +43,61 @@ a{
     text-decoration:none;
 }
 
+:root{
+    --gold:#d4af37;
+}
+
 /* HEADER */
 
 header{
     position:fixed;
-    top:15px;
+    top:14px;
     left:50%;
     transform:translateX(-50%);
-    width:95%;
+    width:94%;
     max-width:1400px;
     z-index:9999;
 
-    background:rgba(10,10,10,0.8);
-    backdrop-filter:blur(18px);
+    background:rgba(10,10,10,0.92);
+    backdrop-filter:blur(16px);
 
     border:1px solid rgba(255,255,255,0.08);
 
-    border-radius:22px;
+    border-radius:24px;
 }
 
 nav{
-    height:74px;
+    height:78px;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    padding:0 20px;
+    padding:0 18px;
 }
 
 .nav-logo{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:14px;
 }
 
 .nav-logo img{
-    width:44px;
-    height:44px;
+    width:52px;
+    height:52px;
+    border-radius:14px;
     object-fit:cover;
-    border-radius:12px;
 }
 
 .nav-logo span{
-    font-size:24px;
+    font-size:28px;
     font-weight:800;
     color:white;
 }
 
 .nav-links{
     display:flex;
-    gap:30px;
+    gap:34px;
 }
 
 .nav-links a{
@@ -112,12 +107,13 @@ nav{
 }
 
 .nav-btn{
-    padding:13px 22px;
-    border-radius:999px;
-
-    background:linear-gradient(135deg,var(--gold),#f6d777);
+    background:linear-gradient(135deg,var(--gold),#f7d777);
 
     color:#111;
+
+    padding:13px 24px;
+
+    border-radius:999px;
 
     font-size:13px;
     font-weight:700;
@@ -126,13 +122,13 @@ nav{
 .menu-btn{
     display:none;
     color:white;
-    font-size:24px;
+    font-size:28px;
 }
 
 /* HERO */
 
 .hero{
-    min-height:100vh;
+    min-height:92vh;
 
     display:flex;
     align-items:center;
@@ -144,7 +140,7 @@ nav{
 
     background:
     radial-gradient(circle at top left, rgba(212,175,55,0.12), transparent 30%),
-    radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 30%),
+    radial-gradient(circle at top right, rgba(255,255,255,0.06), transparent 30%),
     #050505;
 }
 
@@ -165,14 +161,14 @@ nav{
 
     border:1px solid rgba(255,255,255,0.08);
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 
     font-size:14px;
     font-weight:600;
 }
 
 .hero h1{
-    font-size:clamp(52px,9vw,110px);
+    font-size:clamp(56px,9vw,110px);
 
     line-height:0.95;
 
@@ -188,15 +184,13 @@ nav{
 }
 
 .hero p{
-    max-width:780px;
+    font-size:21px;
+    color:#d0d0d0;
+    line-height:1.8;
+
+    max-width:760px;
 
     margin:auto auto 40px;
-
-    color:#d1d1d1;
-
-    font-size:21px;
-
-    line-height:1.8;
 }
 
 .cta-group{
@@ -214,9 +208,7 @@ nav{
     font-size:15px;
     font-weight:700;
 
-    transition:var(--transition);
-
-    display:inline-flex;
+    display:flex;
     align-items:center;
     justify-content:center;
     gap:10px;
@@ -228,15 +220,9 @@ nav{
 }
 
 .btn-secondary{
-    background:rgba(255,255,255,0.06);
-
-    color:white;
-
+    background:#111;
     border:1px solid rgba(255,255,255,0.08);
-}
-
-.btn:hover{
-    transform:translateY(-4px);
+    color:white;
 }
 
 /* SECTION */
@@ -250,13 +236,11 @@ section{
 .section-title{
     text-align:center;
 
-    font-size:clamp(40px,5vw,68px);
+    font-size:clamp(40px,5vw,70px);
 
     font-weight:900;
 
     margin-bottom:70px;
-
-    letter-spacing:-0.05em;
 }
 
 /* SERVICES */
@@ -268,23 +252,17 @@ section{
 }
 
 .bento-card{
-    background:#111;
+    background:#101010;
 
     border:1px solid rgba(255,255,255,0.08);
 
     border-radius:28px;
 
     padding:38px;
-
-    transition:var(--transition);
-}
-
-.bento-card:hover{
-    transform:translateY(-8px);
 }
 
 .bento-card i{
-    font-size:40px;
+    font-size:38px;
     color:var(--gold);
     margin-bottom:22px;
 }
@@ -314,20 +292,15 @@ section{
 
     overflow:hidden;
 
-    background:#111;
+    height:430px;
 
-    height:450px;
+    background:#111;
 }
 
 .portfolio-card img{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:1s;
-}
-
-.portfolio-card:hover img{
-    transform:scale(1.08);
 }
 
 .portfolio-info{
@@ -351,7 +324,7 @@ section{
 
 .portfolio-info p{
     font-size:14px;
-    color:#d2d2d2;
+    color:#d4d4d4;
 }
 
 /* TESTIMONIAL */
@@ -359,7 +332,7 @@ section{
 .quote-section{
     background:#101010;
 
-    border-radius:36px;
+    border-radius:34px;
 
     text-align:center;
 
@@ -371,11 +344,11 @@ section{
 
     font-weight:800;
 
-    line-height:1.35;
+    line-height:1.4;
 
-    max-width:950px;
+    max-width:900px;
 
-    margin:auto auto 30px;
+    margin:auto auto 26px;
 }
 
 /* CONTACT */
@@ -383,7 +356,7 @@ section{
 .contact-container{
     background:#101010;
 
-    border-radius:36px;
+    border-radius:34px;
 
     text-align:center;
 
@@ -392,15 +365,12 @@ section{
 
 .contact-container h2{
     font-size:clamp(42px,5vw,72px);
-
-    font-weight:900;
-
     margin-bottom:18px;
 }
 
 .contact-container p{
-    font-size:20px;
     color:#d0d0d0;
+    font-size:20px;
 }
 
 .contact-numbers{
@@ -409,24 +379,23 @@ section{
     gap:24px;
     flex-wrap:wrap;
 
-    margin:60px 0;
+    margin:55px 0;
 }
 
 .num-block{
     background:#161616;
 
-    border:1px solid rgba(255,255,255,0.08);
-
     border-radius:24px;
 
-    padding:28px 32px;
+    padding:28px 34px;
 
     min-width:280px;
+
+    border:1px solid rgba(255,255,255,0.08);
 }
 
 .num-block strong{
     font-size:26px;
-    color:white;
 }
 
 /* FOOTER */
@@ -434,7 +403,7 @@ section{
 footer{
     padding:60px 20px;
     text-align:center;
-    color:#bcbcbc;
+    color:#bdbdbd;
 }
 
 /* WHATSAPP */
@@ -442,11 +411,11 @@ footer{
 .wa-float{
     position:fixed;
 
-    right:22px;
-    bottom:22px;
+    right:20px;
+    bottom:20px;
 
-    width:70px;
-    height:70px;
+    width:72px;
+    height:72px;
 
     border-radius:50%;
 
@@ -458,22 +427,9 @@ footer{
 
     color:white;
 
-    font-size:34px;
+    font-size:36px;
 
-    z-index:9999;
-}
-
-/* REVEAL */
-
-.reveal{
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
+    z-index:99999;
 }
 
 /* MOBILE */
@@ -495,10 +451,6 @@ footer{
 
     .menu-btn{
         display:block;
-    }
-
-    nav{
-        padding:0 16px;
     }
 
     .hero{
@@ -526,11 +478,7 @@ footer{
     }
 
     .portfolio-card{
-        height:400px;
-    }
-
-    .contact-container p{
-        font-size:18px;
+        height:420px;
     }
 
 }
@@ -556,7 +504,7 @@ footer{
 <div class="nav-links">
 
 <a href="#services">Services</a>
-<a href="#portfolio">Work</a>
+<a href="#portfolio">Projects</a>
 <a href="#contact">Contact</a>
 
 </div>
@@ -577,13 +525,13 @@ Book Call
 
 <section class="hero">
 
-<div class="hero-content reveal">
+<div class="hero-content">
 
 <div class="hero-badge">
 
 <i class="fas fa-star"></i>
 
-India's Digital Growth Agency
+Digital Growth Agency
 
 </div>
 
@@ -593,8 +541,8 @@ Indian Brands.
 </h1>
 
 <p>
-Adverra creates websites, social media campaigns,
-branding content and digital growth systems for ambitious Indian businesses.
+Websites, social media campaigns, branding visuals,
+performance ads and growth systems for ambitious businesses.
 </p>
 
 <div class="cta-group">
@@ -604,11 +552,7 @@ Start Growing
 </a>
 
 <a href="https://wa.me/919213525165" class="btn btn-secondary">
-
-View Strategy
-
-<i class="fas fa-arrow-right"></i>
-
+WhatsApp Team
 </a>
 
 </div>
@@ -621,80 +565,80 @@ View Strategy
 
 <section id="services">
 
-<h2 class="section-title reveal">
+<h2 class="section-title">
 What We Do
 </h2>
 
 <div class="grid-bento">
 
-<div class="bento-card reveal">
+<div class="bento-card">
 
 <i class="fab fa-instagram"></i>
 
 <h3>Social Media</h3>
 
 <p>
-Instagram reels, content systems and branding that help Indian businesses grow online.
+Modern Instagram marketing and content strategies for Indian brands.
 </p>
 
 </div>
 
-<div class="bento-card reveal">
+<div class="bento-card">
 
 <i class="fas fa-bullseye"></i>
 
 <h3>Performance Ads</h3>
 
 <p>
-Meta and Google ad campaigns focused on leads, conversions and business growth.
+Meta and Google ad campaigns focused on growth and conversions.
 </p>
 
 </div>
 
-<div class="bento-card reveal">
+<div class="bento-card">
 
 <i class="fas fa-camera"></i>
 
 <h3>Brand Shoots</h3>
 
 <p>
-Professional product shoots and campaign visuals for your brand.
+Professional campaign shoots and product photography.
 </p>
 
 </div>
 
-<div class="bento-card reveal">
+<div class="bento-card">
 
 <i class="fas fa-video"></i>
 
 <h3>Video Content</h3>
 
 <p>
-Modern short-form videos and ad creatives designed for engagement.
+Reels, ad creatives and modern short-form content.
 </p>
 
 </div>
 
-<div class="bento-card reveal">
+<div class="bento-card">
 
 <i class="fas fa-laptop-code"></i>
 
 <h3>Websites</h3>
 
 <p>
-Fast websites with modern UI/UX and fully mobile-friendly design.
+Fast fully mobile-friendly websites with premium UI/UX.
 </p>
 
 </div>
 
-<div class="bento-card reveal">
+<div class="bento-card">
 
 <i class="fas fa-chart-line"></i>
 
 <h3>Growth Systems</h3>
 
 <p>
-Analytics, automation and funnels that improve conversions and scaling.
+Analytics and systems that improve conversions and scaling.
 </p>
 
 </div>
@@ -707,122 +651,138 @@ Analytics, automation and funnels that improve conversions and scaling.
 
 <section id="portfolio">
 
-<h2 class="section-title reveal">
-Recent Projects
+<h2 class="section-title">
+Client Projects
 </h2>
 
 <div class="portfolio-grid">
 
-<div class="portfolio-card reveal">
-
-<img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?q=80&w=1200&auto=format&fit=crop">
-
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop">
 <div class="portfolio-info">
-
 <h4>Fashion Brand</h4>
-
 <p>Instagram Campaign</p>
-
+</div>
 </div>
 
-</div>
-
-<div class="portfolio-card reveal">
-
+<div class="portfolio-card">
 <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1200&auto=format&fit=crop">
-
 <div class="portfolio-info">
-
 <h4>Jewellery Brand</h4>
-
 <p>Creative Production</p>
-
+</div>
 </div>
 
-</div>
-
-<div class="portfolio-card reveal">
-
+<div class="portfolio-card">
 <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop">
-
 <div class="portfolio-info">
-
 <h4>Restaurant Campaign</h4>
-
 <p>Digital Branding</p>
-
+</div>
 </div>
 
-</div>
-
-<div class="portfolio-card reveal">
-
+<div class="portfolio-card">
 <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1200&auto=format&fit=crop">
-
 <div class="portfolio-info">
-
 <h4>Resort Marketing</h4>
-
 <p>Hospitality Campaign</p>
-
+</div>
 </div>
 
-</div>
-
-<div class="portfolio-card reveal">
-
+<div class="portfolio-card">
 <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop">
-
 <div class="portfolio-info">
-
 <h4>Corporate Brand</h4>
-
 <p>Business Growth</p>
-
+</div>
 </div>
 
-</div>
-
-<div class="portfolio-card reveal">
-
+<div class="portfolio-card">
 <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop">
-
 <div class="portfolio-info">
-
 <h4>Real Estate</h4>
-
 <p>Visual Marketing</p>
-
+</div>
 </div>
 
-</div>
-
-<div class="portfolio-card reveal">
-
+<div class="portfolio-card">
 <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1200&auto=format&fit=crop">
-
 <div class="portfolio-info">
-
 <h4>Interior Design</h4>
-
 <p>Social Content</p>
-
+</div>
 </div>
 
-</div>
-
-<div class="portfolio-card reveal">
-
+<div class="portfolio-card">
 <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200&auto=format&fit=crop">
-
 <div class="portfolio-info">
-
 <h4>Beauty Brand</h4>
-
 <p>Social Media Marketing</p>
-
+</div>
 </div>
 
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+<div class="portfolio-info">
+<h4>Saree Brand</h4>
+<p>Content Campaign</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+<div class="portfolio-info">
+<h4>Luxury Villa</h4>
+<p>Visual Production</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+<div class="portfolio-info">
+<h4>Furniture Brand</h4>
+<p>Ad Campaign</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop">
+<div class="portfolio-info">
+<h4>Clothing Store</h4>
+<p>Growth Marketing</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop">
+<div class="portfolio-info">
+<h4>Home Decor</h4>
+<p>Creative Strategy</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop">
+<div class="portfolio-info">
+<h4>Hotel Brand</h4>
+<p>Digital Presence</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+<div class="portfolio-info">
+<h4>Travel Agency</h4>
+<p>Social Campaign</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+<div class="portfolio-info">
+<h4>Startup Brand</h4>
+<p>Online Marketing</p>
+</div>
 </div>
 
 </div>
@@ -831,15 +791,14 @@ Recent Projects
 
 <!-- TESTIMONIAL -->
 
-<section class="quote-section reveal">
+<section class="quote-section">
 
 <p class="quote-text">
-“Adverra transformed our online presence.
-The branding, content and campaigns helped us grow faster than expected.”
+“Adverra transformed our online presence and helped us generate consistent leads through social media and branding.”
 </p>
 
-<p style="margin-top:20px;color:#d2d2d2;font-size:18px;">
-— Founder, Indian Fashion Brand
+<p style="margin-top:18px;color:#d0d0d0;font-size:18px;">
+— Founder, Fashion Brand
 </p>
 
 </section>
@@ -848,7 +807,7 @@ The branding, content and campaigns helped us grow faster than expected.”
 
 <section id="contact">
 
-<div class="contact-container reveal">
+<div class="contact-container">
 
 <h2>
 Let’s Build Your Brand.
@@ -861,15 +820,11 @@ Talk directly with the Adverra team.
 <div class="contact-numbers">
 
 <a href="tel:+919213525165" class="num-block">
-
 <strong>+91 92135 25165</strong>
-
 </a>
 
 <a href="tel:+919274436018" class="num-block">
-
 <strong>+91 92744 36018</strong>
-
 </a>
 
 </div>
@@ -894,44 +849,18 @@ Call Now
 
 <p>
 © 2026 Adverra Digital Marketing Private Limited.
-All rights reserved.
 </p>
 
-<p style="margin-top:12px;">
+<p style="margin-top:10px;">
 Ahmedabad • Rajkot • Mumbai • Delhi • Bangalore
 </p>
 
 </footer>
 
 <a href="https://wa.me/919213525165" class="wa-float">
-
 <i class="fab fa-whatsapp"></i>
-
 </a>
 
-<script>
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach((entry)=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add('active');
-
-}
-
-});
-
-},{threshold:0.1});
-
-document.querySelectorAll('.reveal').forEach((el)=>{
-
-observer.observe(el);
-
-});
-
-</script>
-
 </body>
+
 </html>
