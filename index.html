@@ -7,145 +7,216 @@
 
 <title>Adverra | Digital Growth Agency</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
 
+:root{
+--bg:#050505;
+--card:#101010;
+--text:#ffffff;
+--gray:#bdbdbd;
+--gold:#d4af37;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-    margin:0;
-    font-family:Inter,sans-serif;
-    background:#050505;
-    color:white;
+font-family:Inter,sans-serif;
+background:var(--bg);
+color:var(--text);
 }
 
 /* HEADER */
 
 header{
-    position:fixed;
-    width:100%;
-    top:0;
-    background:#0c0c0c;
-    padding:15px 20px;
-    z-index:999;
+position:fixed;
+top:0;
+width:100%;
+background:rgba(10,10,10,.8);
+backdrop-filter:blur(10px);
+z-index:999;
 }
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.logo img{
-    height:40px;
-}
+.logo img{height:40px;border-radius:10px;}
 
 .nav-links{
-    display:flex;
-    gap:20px;
+display:flex;
+gap:20px;
 }
 
 .nav-links a{
-    color:white;
-    font-size:14px;
+color:white;
+font-size:14px;
 }
 
-/* HERO (NO IMAGE) */
+/* HERO */
 
 .hero{
-    padding:150px 20px 100px;
-    text-align:center;
+padding:140px 20px 100px;
+text-align:center;
+max-width:900px;
+margin:auto;
 }
 
 .hero h1{
-    font-size:60px;
-    font-weight:800;
+font-size:clamp(40px,8vw,80px);
+font-weight:900;
+line-height:1;
 }
 
-.hero span{
-    color:#d4af37;
-}
+.hero span{color:var(--gold);}
 
 .hero p{
-    color:#ccc;
-    max-width:600px;
-    margin:20px auto;
+margin:20px auto;
+color:#ccc;
+font-size:18px;
+line-height:1.6;
 }
 
 .btn{
-    padding:14px 28px;
-    border-radius:30px;
-    display:inline-block;
-    margin:10px;
+padding:14px 28px;
+border-radius:50px;
+display:inline-block;
+margin:10px;
+font-weight:600;
 }
 
 .primary{
-    background:#d4af37;
-    color:black;
+background:linear-gradient(135deg,#d4af37,#f7d777);
+color:black;
 }
 
 .secondary{
-    border:1px solid #444;
+border:1px solid #444;
+}
+
+/* SECTION */
+
+section{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+.title{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+font-weight:800;
 }
 
 /* SERVICES */
 
-section{
-    padding:80px 20px;
-}
-
-.title{
-    text-align:center;
-    font-size:36px;
-    margin-bottom:40px;
-}
-
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
 }
 
 .card{
-    background:#111;
-    border-radius:20px;
-    overflow:hidden;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card img{
-    height:200px;
-    object-fit:cover;
+height:200px;
+object-fit:cover;
 }
 
 .card-content{
-    padding:20px;
+padding:20px;
 }
 
 .card h3{
-    margin-bottom:10px;
+margin-bottom:10px;
+font-size:20px;
+}
+
+.card p{
+color:#ccc;
+font-size:14px;
 }
 
 /* PORTFOLIO */
 
-.portfolio img{
-    height:300px;
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.portfolio-grid img{
+height:280px;
+width:100%;
+object-fit:cover;
+border-radius:20px;
 }
 
 /* CONTACT */
 
 .contact{
-    text-align:center;
+text-align:center;
+background:#0e0e0e;
+border-radius:20px;
+padding:50px 20px;
 }
 
+.contact h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.contact p{color:#ccc;}
+
+.numbers{
+margin:20px 0;
+}
+
+.numbers h3{
+margin:5px 0;
+}
+
+/* FOOTER */
+
 footer{
-    text-align:center;
-    padding:30px;
-    color:#888;
+text-align:center;
+padding:30px;
+color:#888;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.nav-links{display:none;}
+
+.hero h1{font-size:42px;}
+
+.hero p{font-size:16px;}
+
 }
 
 </style>
@@ -175,14 +246,14 @@ footer{
 
 <section class="hero">
 
-<h1>We Grow <span>Indian</span> Brands</h1>
+<h1>We Scale <span>Indian</span> Brands</h1>
 
 <p>
-Performance marketing, content creation & high-converting websites for modern businesses.
+Premium content, paid ads & high-converting websites designed for modern businesses.
 </p>
 
-<a href="#contact" class="btn primary">Start Now</a>
-<a href="#services" class="btn secondary">Our Services</a>
+<a href="#contact" class="btn primary">Start Growing</a>
+<a href="#services" class="btn secondary">Explore Services</a>
 
 </section>
 
@@ -190,7 +261,7 @@ Performance marketing, content creation & high-converting websites for modern bu
 
 <section id="services">
 
-<h2 class="title">Our Services</h2>
+<h2 class="title">Our Expertise</h2>
 
 <div class="grid">
 
@@ -198,7 +269,7 @@ Performance marketing, content creation & high-converting websites for modern bu
 <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb">
 <div class="card-content">
 <h3>Social Media</h3>
-<p>Instagram growth & content for Indian audience</p>
+<p>Instagram growth for Indian brands</p>
 </div>
 </div>
 
@@ -206,7 +277,7 @@ Performance marketing, content creation & high-converting websites for modern bu
 <img src="https://images.unsplash.com/photo-1557838923-2985c318be48">
 <div class="card-content">
 <h3>Paid Ads</h3>
-<p>Meta & Google ads for ROI</p>
+<p>Meta & Google performance ads</p>
 </div>
 </div>
 
@@ -214,7 +285,7 @@ Performance marketing, content creation & high-converting websites for modern bu
 <img src="https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2">
 <div class="card-content">
 <h3>Video Production</h3>
-<p>Reels & ad videos</p>
+<p>Reels & cinematic ads</p>
 </div>
 </div>
 
@@ -222,7 +293,7 @@ Performance marketing, content creation & high-converting websites for modern bu
 <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d">
 <div class="card-content">
 <h3>Website Design</h3>
-<p>Modern business websites</p>
+<p>Modern responsive websites</p>
 </div>
 </div>
 
@@ -234,14 +305,14 @@ Performance marketing, content creation & high-converting websites for modern bu
 
 <section id="portfolio">
 
-<h2 class="title">Our Work</h2>
+<h2 class="title">Recent Work</h2>
 
-<div class="grid portfolio">
+<div class="portfolio-grid">
 
 <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47">
-<img src="https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2">
 <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
 <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<img src="https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2">
 
 </div>
 
@@ -249,16 +320,22 @@ Performance marketing, content creation & high-converting websites for modern bu
 
 <!-- CONTACT -->
 
-<section id="contact" class="contact">
+<section id="contact">
 
-<h2 class="title">Contact Us</h2>
+<div class="contact">
 
-<p>Call or WhatsApp</p>
+<h2>Let’s Work Together</h2>
 
+<p>Call or WhatsApp now</p>
+
+<div class="numbers">
 <h3>+91 92135 25165</h3>
 <h3>+91 92744 36018</h3>
+</div>
 
-<a href="https://wa.me/919213525165" class="btn primary">WhatsApp</a>
+<a href="https://wa.me/919213525165" class="btn primary">WhatsApp Now</a>
+
+</div>
 
 </section>
 
