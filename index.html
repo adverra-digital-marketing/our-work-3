@@ -6,19 +6,10 @@
 
 <title>Adverra | Digital Growth Agency</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
 <style>
-
-:root{
---bg:#050505;
---card:rgba(255,255,255,0.06);
---text:#fff;
---muted:#bdbdbd;
---gold:#d4af37;
---radius:24px;
-}
 
 *{
 margin:0;
@@ -28,8 +19,8 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:radial-gradient(circle at top,#111, #050505);
-color:var(--text);
+background:#060606;
+color:#fff;
 overflow-x:hidden;
 }
 
@@ -41,9 +32,9 @@ left:50%;
 transform:translateX(-50%);
 width:95%;
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
 border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
 z-index:999;
 }
 
@@ -51,7 +42,7 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
+padding:14px 20px;
 max-width:1200px;
 margin:auto;
 }
@@ -70,7 +61,7 @@ border-radius:10px;
 
 .nav-links{
 display:flex;
-gap:20px;
+gap:18px;
 }
 
 .nav-links a{
@@ -80,24 +71,24 @@ font-size:14px;
 
 /* HERO */
 .hero{
-padding:140px 20px 60px;
+padding:140px 20px 50px;
 max-width:1100px;
 margin:auto;
 text-align:center;
 }
 
 .hero h1{
-font-size:44px;
+font-size:42px;
 line-height:1.2;
 }
 
 .hero span{
-color:var(--gold);
+color:#d4af37;
 }
 
 .hero p{
 margin-top:15px;
-color:var(--muted);
+color:#bdbdbd;
 line-height:1.6;
 }
 
@@ -106,7 +97,7 @@ line-height:1.6;
 display:inline-block;
 margin-top:20px;
 padding:12px 24px;
-background:var(--gold);
+background:#d4af37;
 color:#000;
 border-radius:30px;
 font-weight:600;
@@ -133,16 +124,16 @@ gap:20px;
 }
 
 .card{
-background:var(--card);
+background:rgba(255,255,255,0.06);
 padding:22px;
-border-radius:var(--radius);
-backdrop-filter:blur(12px);
+border-radius:20px;
 border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
 }
 
 .card i{
 font-size:26px;
-color:var(--gold);
+color:#d4af37;
 margin-bottom:10px;
 }
 
@@ -156,12 +147,12 @@ margin-top:8px;
 .portfolio{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:15px;
+gap:14px;
 }
 
 .project{
-background:var(--card);
-border-radius:18px;
+background:rgba(255,255,255,0.06);
+border-radius:16px;
 overflow:hidden;
 border:1px solid rgba(255,255,255,0.08);
 }
@@ -183,19 +174,15 @@ font-size:14px;
 .project p{
 font-size:12px;
 color:#aaa;
-margin-top:5px;
 }
 
 /* CONTACT */
 .contact{
 text-align:center;
-background:var(--card);
+background:rgba(255,255,255,0.05);
 padding:60px 20px;
-border-radius:30px;
-}
-
-.contact h2{
-margin-bottom:20px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .numbers{
@@ -203,11 +190,12 @@ display:flex;
 justify-content:center;
 gap:15px;
 flex-wrap:wrap;
+margin-top:20px;
 }
 
 .number{
 padding:12px 18px;
-background:rgba(255,255,255,0.05);
+background:rgba(255,255,255,0.06);
 border-radius:12px;
 }
 
@@ -219,40 +207,23 @@ right:20px;
 width:55px;
 height:55px;
 background:#25d366;
+border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:50%;
 font-size:26px;
 }
 
 /* RESPONSIVE */
 @media(max-width:900px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.portfolio{
-grid-template-columns:1fr 1fr;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.nav-links{
-display:none;
-}
-
+.grid{grid-template-columns:1fr;}
+.portfolio{grid-template-columns:1fr 1fr;}
+.hero h1{font-size:32px;}
+.nav-links{display:none;}
 }
 
 @media(max-width:500px){
-
-.portfolio{
-grid-template-columns:1fr;
-}
-
+.portfolio{grid-template-columns:1fr;}
 }
 
 </style>
@@ -277,17 +248,16 @@ Adverra
 </nav>
 </header>
 
-<!-- HERO (NO IMAGE) -->
+<!-- HERO -->
 <section class="hero">
 
-<h1>We Build <span>Digital Growth</span> for Indian Brands</h1>
+<h1>We Build <span>Digital Growth</span> for Indian Businesses</h1>
 
 <p>
-We help businesses grow with social media, ads, content creation, websites and branding.
-Focused on real results, not just design.
+We help Indian brands grow using marketing, ads, content creation and websites focused on real business results.
 </p>
 
-<a href="#contact" class="btn">Get Started</a>
+<a href="#contact" class="btn">Start Now</a>
 
 </section>
 
@@ -300,170 +270,115 @@ Focused on real results, not just design.
 
 <div class="card">
 <i class="fab fa-instagram"></i>
-<h3>Social Media</h3>
-<p>Instagram growth for Indian businesses</p>
+<h3>Social Media Marketing</h3>
+<p>Growth for Indian small and large businesses</p>
 </div>
 
 <div class="card">
 <i class="fas fa-bullseye"></i>
-<h3>Paid Ads</h3>
-<p>Meta & Google ads for leads and sales</p>
+<h3>Online Advertising</h3>
+<p>Lead generation using Meta & Google ads</p>
 </div>
 
 <div class="card">
 <i class="fas fa-camera"></i>
-<h3>Photography</h3>
-<p>Product & brand photography</p>
+<h3>Product Photography</h3>
+<p>Indian brand product shoots</p>
 </div>
 
 <div class="card">
 <i class="fas fa-video"></i>
-<h3>Video Ads</h3>
-<p>Reels & marketing videos</p>
+<h3>Video Marketing</h3>
+<p>Reels and ad videos for brands</p>
 </div>
 
 <div class="card">
 <i class="fas fa-laptop-code"></i>
-<h3>Websites</h3>
-<p>Fast modern business websites</p>
+<h3>Website Development</h3>
+<p>Business websites for Indian companies</p>
 </div>
 
 <div class="card">
 <i class="fas fa-chart-line"></i>
-<h3>Growth Strategy</h3>
-<p>Business analytics & planning</p>
+<h3>Business Growth</h3>
+<p>Strategy and performance tracking</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- PORTFOLIO (20 INDIAN CLIENT PROJECTS) -->
+<!-- PORTFOLIO (20 INDIAN INDUSTRY PROJECTS) -->
 <section class="section" id="work">
 
-<div class="title">Indian Client Projects</div>
+<div class="title">Indian Industry Projects</div>
 
 <div class="portfolio">
 
-<!-- 1 -->
+<!-- ALL IMAGES INDIAN BUSINESS STYLE ONLY -->
+
 <div class="project">
-<img src="https://images.unsplash.com/photo-1521791055366-0d553872125f">
-<div><h4>Ahmedabad Fashion Brand</h4><p>Instagram growth campaign</p></div>
+<img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc">
+<div><h4>Clothing Industry</h4><p>Social media growth system</p></div>
 </div>
 
-<!-- 2 -->
 <div class="project">
-<img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b">
-<div><h4>Mumbai Jewellery Store</h4><p>Product branding shoot</p></div>
+<img src="https://images.unsplash.com/photo-1606813907291-76a0a2a4d9a5">
+<div><h4>Jewellery Industry</h4><p>Product branding</p></div>
 </div>
 
-<!-- 3 -->
 <div class="project">
-<img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
-<div><h4>Delhi Startup Agency</h4><p>Meta ads lead generation</p></div>
+<img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
+<div><h4>Real Estate Industry</h4><p>Lead generation ads</p></div>
 </div>
 
-<!-- 4 -->
 <div class="project">
-<img src="https://images.unsplash.com/photo-1521334884684-d80222895322">
-<div><h4>Bangalore Tech Company</h4><p>Website design</p></div>
+<img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb">
+<div><h4>Restaurant Industry</h4><p>Marketing campaigns</p></div>
 </div>
 
-<!-- 5 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<div><h4>Rajkot Clothing Brand</h4><p>Social media content</p></div>
-</div>
-
-<!-- 6 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
-<div><h4>Pune Real Estate</h4><p>Video ads campaign</p></div>
-</div>
-
-<!-- 7 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
-<div><h4>Surat Beauty Studio</h4><p>Instagram reels strategy</p></div>
-</div>
-
-<!-- 8 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
-<div><h4>Hyderabad Restaurant</h4><p>Brand promotion ads</p></div>
-</div>
-
-<!-- 9 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
-<div><h4>Indore Fashion Store</h4><p>Ecommerce growth</p></div>
-</div>
-
-<!-- 10 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
-<div><h4>Goa Resort</h4><p>Tourism marketing</p></div>
-</div>
-
-<!-- 11 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
-<div><h4>Chennai Agency</h4><p>Brand identity design</p></div>
-</div>
-
-<!-- 12 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-<div><h4>Kolkata Business Firm</h4><p>Corporate website</p></div>
-</div>
-
-<!-- 13 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
-<div><h4>Jaipur Jewellery Brand</h4><p>Luxury product ads</p></div>
-</div>
-
-<!-- 14 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<div><h4>Lucknow Startup</h4><p>Lead generation ads</p></div>
-</div>
-
-<!-- 15 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
-<div><h4>Noida IT Company</h4><p>Website UI design</p></div>
-</div>
-
-<!-- 16 -->
-<div class="project">
-<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984">
-<div><h4>Nagpur Coaching Institute</h4><p>Social media ads</p></div>
-</div>
-
-<!-- 17 -->
 <div class="project">
 <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4">
-<div><h4>Varanasi Local Brand</h4><p>Business growth system</p></div>
+<div><h4>Retail Store Industry</h4><p>Business promotion</p></div>
 </div>
 
-<!-- 18 -->
 <div class="project">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-<div><h4>Bhopal Retail Store</h4><p>Brand marketing</p></div>
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div><h4>Salon Industry</h4><p>Instagram reels growth</p></div>
 </div>
 
-<!-- 19 -->
 <div class="project">
 <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a">
-<div><h4>Gujarat Export Company</h4><p>Digital ads setup</p></div>
+<div><h4>Education Industry</h4><p>Lead ads system</p></div>
 </div>
 
-<!-- 20 -->
 <div class="project">
-<img src="https://images.unsplash.com/photo-1504384308090-1b0f6d2b0b1c">
-<div><h4>India Multi Brand Store</h4><p>Full digital marketing</p></div>
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+<div><h4>Hospitality Industry</h4><p>Brand awareness ads</p></div>
 </div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1521791055366-0d553872125f">
+<div><h4>Fashion Industry</h4><p>Influencer marketing</p></div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+<div><h4>Ecommerce Industry</h4><p>Sales funnel ads</p></div>
+</div>
+
+<!-- remaining 10 -->
+
+<div class="project"><img src="https://images.unsplash.com/photo-1521334884684-d80222895322"><div><h4>IT Services Industry</h4></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"><div><h4>Startup Industry</h4></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><div><h4>Coaching Industry</h4></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984"><div><h4>Fitness Industry</h4></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"><div><h4>Corporate Industry</h4></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"><div><h4>Manufacturing Industry</h4></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1504384308090-1b0f6d2b0b1c"><div><h4>Export Industry</h4></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"><div><h4>Finance Industry</h4></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1556761175-4b46a572b786"><div><h4>Beauty Industry</h4></div></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"><div><h4>Service Industry</h4></div></div>
 
 </div>
 
