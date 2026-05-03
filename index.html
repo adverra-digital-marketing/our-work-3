@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Adverra | Elite Digital Growth Agency</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adverra | Premium Digital Growth Agency</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
@@ -23,7 +24,7 @@
     --blue:#2563eb;
     --gold:#d4af37;
 
-    --radius:30px;
+    --radius:32px;
 
     --shadow:
     0 10px 40px rgba(0,0,0,0.08);
@@ -58,7 +59,7 @@ a{
 }
 
 img{
-    max-width:100%;
+    width:100%;
     display:block;
 }
 
@@ -66,24 +67,24 @@ img{
 
 header{
     position:fixed;
-    top:16px;
+    top:14px;
     left:50%;
     transform:translateX(-50%);
     width:95%;
-    max-width:1320px;
+    max-width:1350px;
     z-index:9999;
 
     background:rgba(255,255,255,0.72);
 
-    backdrop-filter:blur(24px);
-    -webkit-backdrop-filter:blur(24px);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
 
-    border:1px solid rgba(255,255,255,0.6);
+    border:1px solid rgba(255,255,255,0.7);
 
     border-radius:24px;
 
     box-shadow:
-    0 8px 30px rgba(0,0,0,0.05);
+    0 8px 40px rgba(0,0,0,0.06);
 }
 
 nav{
@@ -93,7 +94,7 @@ nav{
     align-items:center;
     justify-content:space-between;
 
-    padding:0 30px;
+    padding:0 28px;
 }
 
 .nav-logo{
@@ -104,6 +105,7 @@ nav{
 
 .nav-logo img{
     height:44px;
+    width:auto;
     border-radius:12px;
 }
 
@@ -124,30 +126,30 @@ nav{
     font-size:14px;
     font-weight:600;
     position:relative;
-    transition:0.4s;
 }
 
 .nav-links a::after{
     content:'';
     position:absolute;
     left:0;
-    bottom:-8px;
+    bottom:-7px;
     width:0%;
     height:2px;
     background:linear-gradient(90deg,var(--blue),var(--gold));
-    transition:.4s;
+    transition:0.4s;
 }
 
 .nav-links a:hover::after{
     width:100%;
 }
 
-.nav-cta{
+.nav-btn{
     padding:12px 22px;
+
     border-radius:999px;
 
     background:#111;
-    color:#fff;
+    color:white;
 
     font-size:13px;
     font-weight:600;
@@ -155,33 +157,29 @@ nav{
     transition:var(--transition);
 }
 
-.nav-cta:hover{
-    transform:translateY(-2px);
+.nav-btn:hover{
+    transform:translateY(-3px);
 }
 
-@media(max-width:768px){
-
-    .nav-links{
-        display:none;
-    }
-
-    nav{
-        padding:0 18px;
-    }
-
-    .nav-logo span{
-        font-size:20px;
-    }
-
+.menu-btn{
+    display:none;
+    font-size:22px;
+    color:#111;
 }
 
 /* HERO */
 
 .hero{
-    padding-top:220px;
-    padding-bottom:140px;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     text-align:center;
+
+    padding:180px 20px 120px;
+
     position:relative;
     overflow:hidden;
 }
@@ -197,7 +195,7 @@ nav{
     radial-gradient(circle, rgba(37,99,235,0.15), transparent 70%);
 
     top:-250px;
-    left:-150px;
+    left:-200px;
 
     z-index:-1;
 }
@@ -210,12 +208,16 @@ nav{
     height:700px;
 
     background:
-    radial-gradient(circle, rgba(212,175,55,0.12), transparent 70%);
+    radial-gradient(circle, rgba(212,175,55,0.14), transparent 70%);
 
+    right:-200px;
     top:-250px;
-    right:-150px;
 
     z-index:-1;
+}
+
+.hero-content{
+    max-width:1200px;
 }
 
 .hero-badge{
@@ -227,32 +229,28 @@ nav{
 
     border-radius:999px;
 
-    background:rgba(255,255,255,0.75);
-
-    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,0.8);
 
     border:1px solid rgba(0,0,0,0.06);
+
+    box-shadow:var(--shadow);
 
     font-size:14px;
     font-weight:600;
 
-    margin-bottom:28px;
-
-    box-shadow:var(--shadow);
+    margin-bottom:30px;
 }
 
 .hero h1{
-    font-size:clamp(58px,9vw,120px);
+    font-size:clamp(52px,9vw,120px);
 
-    line-height:0.95;
+    line-height:0.92;
 
     font-weight:900;
 
     letter-spacing:-0.07em;
 
-    max-width:1150px;
-
-    margin:auto auto 34px;
+    margin-bottom:30px;
 
     background:
     linear-gradient(180deg,#111,#444);
@@ -262,25 +260,27 @@ nav{
 }
 
 .hero p{
-    font-size:24px;
-    color:var(--gray);
-
-    max-width:860px;
-
-    margin:0 auto 50px;
+    font-size:clamp(18px,2vw,24px);
 
     line-height:1.7;
+
+    color:var(--gray);
+
+    max-width:850px;
+
+    margin:0 auto 50px;
 }
 
 .cta-group{
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:18px;
     flex-wrap:wrap;
 }
 
 .btn{
     padding:18px 34px;
+
     border-radius:999px;
 
     font-size:16px;
@@ -302,7 +302,7 @@ nav{
 }
 
 .btn-primary:hover{
-    transform:translateY(-4px) scale(1.03);
+    transform:translateY(-5px) scale(1.03);
 }
 
 .btn-secondary{
@@ -315,54 +315,58 @@ nav{
 }
 
 .btn-secondary:hover{
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 }
 
 /* SECTION */
 
 section{
-    padding:120px 24px;
-    max-width:1320px;
+    padding:120px 20px;
+    max-width:1350px;
     margin:auto;
 }
 
 .section-title{
-    font-size:58px;
-    font-weight:900;
+    font-size:clamp(38px,5vw,62px);
+
     text-align:center;
 
-    letter-spacing:-0.05em;
-
     margin-bottom:70px;
+
+    font-weight:900;
+
+    letter-spacing:-0.05em;
 }
 
 /* SERVICES */
 
 .grid-bento{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:28px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:26px;
 }
 
 .bento-card{
-    position:relative;
+    background:rgba(255,255,255,0.8);
 
-    padding:42px;
+    backdrop-filter:blur(18px);
 
     border-radius:32px;
 
-    background:
-    rgba(255,255,255,0.7);
-
-    backdrop-filter:blur(20px);
+    padding:42px;
 
     border:1px solid rgba(255,255,255,0.7);
 
-    overflow:hidden;
+    box-shadow:var(--shadow);
 
     transition:var(--transition);
 
-    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+}
+
+.bento-card:hover{
+    transform:translateY(-10px);
 }
 
 .bento-card::before{
@@ -376,21 +380,17 @@ section{
 
     opacity:0;
 
-    transition:var(--transition);
+    transition:0.5s;
 }
 
 .bento-card:hover::before{
     opacity:1;
 }
 
-.bento-card:hover{
-    transform:translateY(-10px);
-}
-
 .bento-card i{
-    font-size:38px;
+    font-size:40px;
 
-    margin-bottom:28px;
+    margin-bottom:24px;
 
     background:
     linear-gradient(135deg,var(--blue),var(--gold));
@@ -400,14 +400,17 @@ section{
 }
 
 .bento-card h3{
-    font-size:30px;
-    margin-bottom:16px;
+    font-size:28px;
+
+    margin-bottom:14px;
 }
 
 .bento-card p{
     color:var(--gray);
-    font-size:17px;
+
     line-height:1.7;
+
+    font-size:16px;
 }
 
 /* PORTFOLIO */
@@ -418,22 +421,6 @@ section{
     gap:24px;
 }
 
-@media(max-width:1000px){
-
-    .portfolio-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:600px){
-
-    .portfolio-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
 .portfolio-card{
     position:relative;
 
@@ -441,11 +428,11 @@ section{
 
     border-radius:28px;
 
-    aspect-ratio:1/1.25;
-
-    cursor:pointer;
+    aspect-ratio:1/1.2;
 
     box-shadow:var(--shadow);
+
+    cursor:pointer;
 }
 
 .portfolio-card img{
@@ -462,14 +449,16 @@ section{
 
 .portfolio-info{
     position:absolute;
-    inset:auto 0 0 0;
+    bottom:0;
+    left:0;
+    width:100%;
 
     padding:28px;
 
     color:white;
 
     background:
-    linear-gradient(0deg, rgba(0,0,0,0.75), transparent);
+    linear-gradient(0deg, rgba(0,0,0,0.78), transparent);
 }
 
 .portfolio-info h4{
@@ -485,22 +474,21 @@ section{
 /* TESTIMONIAL */
 
 .quote-section{
-    margin-top:80px;
+    margin-top:60px;
 
     border-radius:40px;
 
     background:
     linear-gradient(135deg,#050505,#171717);
 
-    color:white;
-
-    padding:140px 40px;
+    padding:140px 30px;
 
     text-align:center;
 
+    position:relative;
     overflow:hidden;
 
-    position:relative;
+    color:white;
 }
 
 .quote-section::before{
@@ -515,38 +503,37 @@ section{
     radial-gradient(circle, rgba(37,99,235,0.25), transparent 70%);
 
     top:-250px;
-    right:-100px;
+    right:-150px;
 }
 
 .quote-text{
-    font-size:clamp(30px,4vw,54px);
+    font-size:clamp(30px,4vw,56px);
 
     line-height:1.3;
+
+    font-weight:700;
 
     max-width:1000px;
 
     margin:auto auto 30px;
 
-    font-weight:700;
-
-    letter-spacing:-0.04em;
+    letter-spacing:-0.05em;
 }
 
 /* CONTACT */
 
 .contact-container{
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:40px;
-
     background:
     linear-gradient(135deg,#ffffff,#f8fafc);
 
-    padding:100px 40px;
+    border-radius:40px;
+
+    padding:100px 30px;
 
     text-align:center;
+
+    position:relative;
+    overflow:hidden;
 
     box-shadow:var(--shadow);
 }
@@ -563,30 +550,30 @@ section{
     radial-gradient(circle, rgba(212,175,55,0.12), transparent 70%);
 
     top:-250px;
-    right:-200px;
+    right:-150px;
 }
 
 .contact-container h2{
-    font-size:clamp(44px,5vw,76px);
+    font-size:clamp(40px,5vw,74px);
+
+    font-weight:900;
 
     line-height:1;
 
-    margin-bottom:20px;
-
-    font-weight:900;
+    margin-bottom:22px;
 
     letter-spacing:-0.05em;
 }
 
 .contact-container p{
-    color:var(--gray);
     font-size:22px;
+    color:var(--gray);
 }
 
 .contact-numbers{
     display:flex;
     justify-content:center;
-    gap:30px;
+    gap:24px;
     flex-wrap:wrap;
 
     margin:60px 0;
@@ -595,13 +582,13 @@ section{
 .num-block{
     background:white;
 
-    padding:28px 34px;
+    padding:30px 36px;
 
-    border-radius:24px;
+    border-radius:26px;
+
+    min-width:290px;
 
     box-shadow:var(--shadow);
-
-    min-width:280px;
 
     transition:var(--transition);
 }
@@ -615,9 +602,9 @@ section{
 
     color:var(--gray);
 
-    font-size:14px;
-
     margin-bottom:10px;
+
+    font-size:14px;
 }
 
 .num-block strong{
@@ -630,13 +617,15 @@ section{
 footer{
     margin-top:100px;
 
-    padding:60px 24px;
+    background:#f8fafc;
 
     text-align:center;
 
+    padding:60px 20px;
+
     color:var(--gray);
 
-    background:#f8fafc;
+    font-size:14px;
 }
 
 /* WHATSAPP */
@@ -644,8 +633,8 @@ footer{
 .wa-float{
     position:fixed;
 
-    right:30px;
-    bottom:30px;
+    right:22px;
+    bottom:22px;
 
     width:72px;
     height:72px;
@@ -654,11 +643,11 @@ footer{
 
     background:#25d366;
 
+    color:white;
+
     display:flex;
     align-items:center;
     justify-content:center;
-
-    color:white;
 
     font-size:34px;
 
@@ -671,7 +660,7 @@ footer{
 }
 
 .wa-float:hover{
-    transform:translateY(-6px) scale(1.08);
+    transform:translateY(-5px) scale(1.08);
 }
 
 /* REVEAL */
@@ -687,10 +676,91 @@ footer{
     transform:translateY(0);
 }
 
+/* MOBILE */
+
+@media(max-width:992px){
+
+    .portfolio-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    header{
+        width:92%;
+    }
+
+    nav{
+        height:68px;
+        padding:0 18px;
+    }
+
+    .nav-links,
+    .nav-btn{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero{
+        padding-top:170px;
+        min-height:auto;
+    }
+
+    .hero h1{
+        line-height:1;
+    }
+
+    .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .cta-group{
+        flex-direction:column;
+    }
+
+    .contact-container{
+        padding:70px 20px;
+    }
+
+    .quote-section{
+        padding:100px 20px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        margin-bottom:50px;
+    }
+
+    .bento-card{
+        padding:34px;
+    }
+
+    .num-block{
+        min-width:100%;
+    }
+
+}
+
 </style>
+
 </head>
 
 <body>
+
+<!-- HEADER -->
 
 <header>
 
@@ -698,7 +768,7 @@ footer{
 
 <a href="#" class="nav-logo">
 
-<img src="/our-work/assests/logo.jpeg" alt="Adverra Logo">
+<img src="https://raw.githubusercontent.com/adverra-digital-marketing/our-work/main/assests/logo.jpeg" alt="Adverra Logo">
 
 <span>Adverra</span>
 
@@ -712,9 +782,13 @@ footer{
 
 </div>
 
-<a href="#contact" class="nav-cta">
+<a href="#contact" class="nav-btn">
 Consultation →
 </a>
+
+<div class="menu-btn">
+<i class="fas fa-bars"></i>
+</div>
 
 </nav>
 
@@ -724,9 +798,14 @@ Consultation →
 
 <section class="hero">
 
+<div class="hero-content">
+
 <div class="hero-badge reveal">
+
 <i class="fas fa-star"></i>
+
 Adverra Digital Marketing
+
 </div>
 
 <h1 class="reveal">
@@ -734,8 +813,8 @@ Growth, engineered for the ambitious.
 </h1>
 
 <p class="reveal">
-We scale premium Indian brands through precision marketing,
-world-class storytelling, and luxury-grade digital experiences.
+We scale premium Indian brands through luxury-grade storytelling,
+world-class digital experiences, and precision marketing systems.
 </p>
 
 <div class="cta-group reveal">
@@ -745,9 +824,14 @@ Get Started
 </a>
 
 <a href="https://wa.me/919213525165" class="btn btn-secondary">
+
 Connect with experts
+
 <i class="fas fa-arrow-right"></i>
+
 </a>
+
+</div>
 
 </div>
 
@@ -764,16 +848,19 @@ Unrivaled Expertise.
 <div class="grid-bento">
 
 <div class="bento-card reveal">
+
 <i class="fab fa-instagram"></i>
 
 <h3>Social Media</h3>
 
 <p>
-Premium storytelling across Instagram, LinkedIn and X for elite modern brands.
+Luxury storytelling across Instagram, LinkedIn and X for modern brands.
 </p>
+
 </div>
 
 <div class="bento-card reveal">
+
 <i class="fas fa-bullseye"></i>
 
 <h3>Paid Performance</h3>
@@ -781,19 +868,23 @@ Premium storytelling across Instagram, LinkedIn and X for elite modern brands.
 <p>
 Meta and Google campaigns engineered for aggressive scalable ROI.
 </p>
+
 </div>
 
 <div class="bento-card reveal">
+
 <i class="fas fa-camera"></i>
 
 <h3>Luxury Visuals</h3>
 
 <p>
-Editorial-grade photography with AI-enhanced commercial perfection.
+Editorial-grade photography and AI-enhanced commercial perfection.
 </p>
+
 </div>
 
 <div class="bento-card reveal">
+
 <i class="fas fa-video"></i>
 
 <h3>Cinema Content</h3>
@@ -801,9 +892,11 @@ Editorial-grade photography with AI-enhanced commercial perfection.
 <p>
 High-production video systems designed for attention and conversion.
 </p>
+
 </div>
 
 <div class="bento-card reveal">
+
 <i class="fas fa-laptop-code"></i>
 
 <h3>Digital Platforms</h3>
@@ -811,16 +904,19 @@ High-production video systems designed for attention and conversion.
 <p>
 Premium Shopify and landing page experiences built for scale.
 </p>
+
 </div>
 
 <div class="bento-card reveal">
+
 <i class="fas fa-chart-line"></i>
 
 <h3>Growth Analytics</h3>
 
 <p>
-Data-driven decision systems optimized for every marketing rupee.
+Data-driven systems optimized for every marketing rupee invested.
 </p>
+
 </div>
 
 </div>
@@ -835,7 +931,121 @@ Data-driven decision systems optimized for every marketing rupee.
 Success Stories.
 </h2>
 
-<div class="portfolio-grid" id="portfolio-container"></div>
+<div class="portfolio-grid">
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>Taj Heritage Marketing</h4>
+
+<p>Mumbai • Integrated Growth</p>
+
+</div>
+
+</div>
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>Zaveri Gems Campaign</h4>
+
+<p>Surat • Luxury Branding</p>
+
+</div>
+
+</div>
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>TechNova Solutions</h4>
+
+<p>Bangalore • Performance Ads</p>
+
+</div>
+
+</div>
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>Royal Rajasthan Stays</h4>
+
+<p>Jaipur • Hospitality Growth</p>
+
+</div>
+
+</div>
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>Urban Luxe Realty</h4>
+
+<p>Delhi • Real Estate Media</p>
+
+</div>
+
+</div>
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>IndiWear Apparel</h4>
+
+<p>Tiruppur • Fashion Campaign</p>
+
+</div>
+
+</div>
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>Digital Launch Systems</h4>
+
+<p>Ahmedabad • Web Funnels</p>
+
+</div>
+
+</div>
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>Luxury Living Media</h4>
+
+<p>Mumbai • Premium Branding</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -844,7 +1054,7 @@ Success Stories.
 <section class="quote-section reveal">
 
 <p class="quote-text">
-“Adverra didn’t just run campaigns. They transformed our digital identity into a luxury growth engine.”
+“Adverra transformed our digital identity into a luxury growth engine. Revenue grew 400% within 12 months.”
 </p>
 
 <p style="opacity:.65;font-size:18px;">
@@ -926,56 +1136,15 @@ Mumbai • Ahmedabad • Rajkot • Delhi • Bangalore
 
 </a>
 
+<!-- SCRIPT -->
+
 <script>
 
-const projects = [
-
-{ name:"Taj Heritage Marketing", city:"Mumbai", seed:"65" },
-{ name:"Zaveri Gems Campaign", city:"Surat", seed:"102" },
-{ name:"Royal Rajasthan Stays", city:"Jaipur", seed:"201" },
-{ name:"TechNova Solutions", city:"Bangalore", seed:"45" },
-{ name:"Gourmet Gujarat", city:"Ahmedabad", seed:"88" },
-{ name:"Veda Wellness", city:"Rishikesh", seed:"92" },
-{ name:"Urban Luxe Realty", city:"Gurugram", seed:"105" },
-{ name:"Kashmir Silks D2C", city:"Srinagar", seed:"112" },
-{ name:"Coastal Spices", city:"Kochi", seed:"120" },
-{ name:"IndiWear Apparel", city:"Tiruppur", seed:"135" },
-{ name:"Modern Mandir", city:"Rajkot", seed:"142" },
-{ name:"Bollywood Socials", city:"Mumbai", seed:"155" }
-
-];
-
-const container = document.getElementById('portfolio-container');
-
-projects.forEach(project=>{
-
-const card = document.createElement('div');
-
-card.className='portfolio-card reveal';
-
-card.innerHTML=`
-
-<img src="https://picsum.photos/seed/ind${project.seed}/700/900">
-
-<div class="portfolio-info">
-
-<h4>${project.name}</h4>
-
-<p>${project.city} • Integrated Growth</p>
-
-</div>
-
-`;
-
-container.appendChild(card);
-
-});
-
-/* REVEAL */
+/* REVEAL ANIMATION */
 
 const observer = new IntersectionObserver((entries)=>{
 
-entries.forEach(entry=>{
+entries.forEach((entry)=>{
 
 if(entry.isIntersecting){
 
@@ -987,7 +1156,7 @@ entry.target.classList.add('active');
 
 },{threshold:0.1});
 
-document.querySelectorAll('.reveal').forEach(el=>{
+document.querySelectorAll('.reveal').forEach((el)=>{
 
 observer.observe(el);
 
