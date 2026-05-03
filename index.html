@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Adverra | Elite Digital Growth Agency</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<style>
+
+:root{
+    --bg:#ffffff;
+    --text:#0f172a;
+    --gray:#64748b;
+    --light:#f8fafc;
+    --blue:#2563eb;
+    --gold:#d4af37;
+
+    --radius:30px;
+
+    --shadow:
+    0 10px 40px rgba(0,0,0,0.08);
+
+    --transition:all .6s cubic-bezier(.16,1,.3,1);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:
+    radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 25%),
+    radial-gradient(circle at top right, rgba(212,175,55,0.08), transparent 25%),
+    #ffffff;
+
+    color:var(--text);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:16px;
+    left:50%;
+    transform:translateX(-50%);
+    width:95%;
+    max-width:1320px;
+    z-index:9999;
+
+    background:rgba(255,255,255,0.72);
+
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,0.6);
+
+    border-radius:24px;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,0.05);
+}
+
+nav{
+    height:74px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 30px;
+}
+
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.nav-logo img{
+    height:44px;
+    border-radius:12px;
+}
+
+.nav-logo span{
+    font-size:24px;
+    font-weight:800;
+    color:#111;
+    letter-spacing:-1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:34px;
+}
+
+.nav-links a{
+    color:#111;
+    font-size:14px;
+    font-weight:600;
+    position:relative;
+    transition:0.4s;
+}
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0%;
+    height:2px;
+    background:linear-gradient(90deg,var(--blue),var(--gold));
+    transition:.4s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-cta{
+    padding:12px 22px;
+    border-radius:999px;
+
+    background:#111;
+    color:#fff;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:var(--transition);
+}
+
+.nav-cta:hover{
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+    }
+
+    nav{
+        padding:0 18px;
+    }
+
+    .nav-logo span{
+        font-size:20px;
+    }
+
+}
+
+/* HERO */
+
+.hero{
+    padding-top:220px;
+    padding-bottom:140px;
+
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:
+    radial-gradient(circle, rgba(37,99,235,0.15), transparent 70%);
+
+    top:-250px;
+    left:-150px;
+
+    z-index:-1;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:
+    radial-gradient(circle, rgba(212,175,55,0.12), transparent 70%);
+
+    top:-250px;
+    right:-150px;
+
+    z-index:-1;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,0.75);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(0,0,0,0.06);
+
+    font-size:14px;
+    font-weight:600;
+
+    margin-bottom:28px;
+
+    box-shadow:var(--shadow);
+}
+
+.hero h1{
+    font-size:clamp(58px,9vw,120px);
+
+    line-height:0.95;
+
+    font-weight:900;
+
+    letter-spacing:-0.07em;
+
+    max-width:1150px;
+
+    margin:auto auto 34px;
+
+    background:
+    linear-gradient(180deg,#111,#444);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    font-size:24px;
+    color:var(--gray);
+
+    max-width:860px;
+
+    margin:0 auto 50px;
+
+    line-height:1.7;
+}
+
+.cta-group{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:18px 34px;
+    border-radius:999px;
+
+    font-size:16px;
+    font-weight:700;
+
+    transition:var(--transition);
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#111,#222);
+    color:white;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.18);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px) scale(1.03);
+}
+
+.btn-secondary{
+    background:white;
+    color:#111;
+
+    border:1px solid rgba(0,0,0,0.08);
+
+    box-shadow:var(--shadow);
+}
+
+.btn-secondary:hover{
+    transform:translateY(-4px);
+}
+
+/* SECTION */
+
+section{
+    padding:120px 24px;
+    max-width:1320px;
+    margin:auto;
+}
+
+.section-title{
+    font-size:58px;
+    font-weight:900;
+    text-align:center;
+
+    letter-spacing:-0.05em;
+
+    margin-bottom:70px;
+}
+
+/* SERVICES */
+
+.grid-bento{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:28px;
+}
+
+.bento-card{
+    position:relative;
+
+    padding:42px;
+
+    border-radius:32px;
+
+    background:
+    rgba(255,255,255,0.7);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.7);
+
+    overflow:hidden;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+}
+
+.bento-card::before{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(135deg, rgba(255,255,255,0.7), transparent);
+
+    opacity:0;
+
+    transition:var(--transition);
+}
+
+.bento-card:hover::before{
+    opacity:1;
+}
+
+.bento-card:hover{
+    transform:translateY(-10px);
+}
+
+.bento-card i{
+    font-size:38px;
+
+    margin-bottom:28px;
+
+    background:
+    linear-gradient(135deg,var(--blue),var(--gold));
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.bento-card h3{
+    font-size:30px;
+    margin-bottom:16px;
+}
+
+.bento-card p{
+    color:var(--gray);
+    font-size:17px;
+    line-height:1.7;
+}
+
+/* PORTFOLIO */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+@media(max-width:1000px){
+
+    .portfolio-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.portfolio-card{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    aspect-ratio:1/1.25;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+}
+
+.portfolio-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:1s;
+}
+
+.portfolio-card:hover img{
+    transform:scale(1.08);
+}
+
+.portfolio-info{
+    position:absolute;
+    inset:auto 0 0 0;
+
+    padding:28px;
+
+    color:white;
+
+    background:
+    linear-gradient(0deg, rgba(0,0,0,0.75), transparent);
+}
+
+.portfolio-info h4{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.portfolio-info p{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* TESTIMONIAL */
+
+.quote-section{
+    margin-top:80px;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(135deg,#050505,#171717);
+
+    color:white;
+
+    padding:140px 40px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.quote-section::before{
+    content:'';
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:
+    radial-gradient(circle, rgba(37,99,235,0.25), transparent 70%);
+
+    top:-250px;
+    right:-100px;
+}
+
+.quote-text{
+    font-size:clamp(30px,4vw,54px);
+
+    line-height:1.3;
+
+    max-width:1000px;
+
+    margin:auto auto 30px;
+
+    font-weight:700;
+
+    letter-spacing:-0.04em;
+}
+
+/* CONTACT */
+
+.contact-container{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(135deg,#ffffff,#f8fafc);
+
+    padding:100px 40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+}
+
+.contact-container::before{
+    content:'';
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:
+    radial-gradient(circle, rgba(212,175,55,0.12), transparent 70%);
+
+    top:-250px;
+    right:-200px;
+}
+
+.contact-container h2{
+    font-size:clamp(44px,5vw,76px);
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+    font-weight:900;
+
+    letter-spacing:-0.05em;
+}
+
+.contact-container p{
+    color:var(--gray);
+    font-size:22px;
+}
+
+.contact-numbers{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+
+    margin:60px 0;
+}
+
+.num-block{
+    background:white;
+
+    padding:28px 34px;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+    min-width:280px;
+
+    transition:var(--transition);
+}
+
+.num-block:hover{
+    transform:translateY(-8px);
+}
+
+.num-block span{
+    display:block;
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    margin-bottom:10px;
+}
+
+.num-block strong{
+    font-size:28px;
+    color:#111;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:100px;
+
+    padding:60px 24px;
+
+    text-align:center;
+
+    color:var(--gray);
+
+    background:#f8fafc;
+}
+
+/* WHATSAPP */
+
+.wa-float{
+    position:fixed;
+
+    right:30px;
+    bottom:30px;
+
+    width:72px;
+    height:72px;
+
+    border-radius:50%;
+
+    background:#25d366;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-size:34px;
+
+    box-shadow:
+    0 20px 40px rgba(37,211,102,0.35);
+
+    z-index:99999;
+
+    transition:var(--transition);
+}
+
+.wa-float:hover{
+    transform:translateY(-6px) scale(1.08);
+}
+
+/* REVEAL */
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s cubic-bezier(.16,1,.3,1);
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<a href="#" class="nav-logo">
+
+<img src="/our-work/assests/logo.jpeg" alt="Adverra Logo">
+
+<span>Adverra</span>
+
+</a>
+
+<div class="nav-links">
+
+<a href="#services">Expertise</a>
+<a href="#portfolio">Stories</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<a href="#contact" class="nav-cta">
+Consultation →
+</a>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-badge reveal">
+<i class="fas fa-star"></i>
+Adverra Digital Marketing
+</div>
+
+<h1 class="reveal">
+Growth, engineered for the ambitious.
+</h1>
+
+<p class="reveal">
+We scale premium Indian brands through precision marketing,
+world-class storytelling, and luxury-grade digital experiences.
+</p>
+
+<div class="cta-group reveal">
+
+<a href="#contact" class="btn btn-primary">
+Get Started
+</a>
+
+<a href="https://wa.me/919213525165" class="btn btn-secondary">
+Connect with experts
+<i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="section-title reveal">
+Unrivaled Expertise.
+</h2>
+
+<div class="grid-bento">
+
+<div class="bento-card reveal">
+<i class="fab fa-instagram"></i>
+
+<h3>Social Media</h3>
+
+<p>
+Premium storytelling across Instagram, LinkedIn and X for elite modern brands.
+</p>
+</div>
+
+<div class="bento-card reveal">
+<i class="fas fa-bullseye"></i>
+
+<h3>Paid Performance</h3>
+
+<p>
+Meta and Google campaigns engineered for aggressive scalable ROI.
+</p>
+</div>
+
+<div class="bento-card reveal">
+<i class="fas fa-camera"></i>
+
+<h3>Luxury Visuals</h3>
+
+<p>
+Editorial-grade photography with AI-enhanced commercial perfection.
+</p>
+</div>
+
+<div class="bento-card reveal">
+<i class="fas fa-video"></i>
+
+<h3>Cinema Content</h3>
+
+<p>
+High-production video systems designed for attention and conversion.
+</p>
+</div>
+
+<div class="bento-card reveal">
+<i class="fas fa-laptop-code"></i>
+
+<h3>Digital Platforms</h3>
+
+<p>
+Premium Shopify and landing page experiences built for scale.
+</p>
+</div>
+
+<div class="bento-card reveal">
+<i class="fas fa-chart-line"></i>
+
+<h3>Growth Analytics</h3>
+
+<p>
+Data-driven decision systems optimized for every marketing rupee.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+<h2 class="section-title reveal">
+Success Stories.
+</h2>
+
+<div class="portfolio-grid" id="portfolio-container"></div>
+
+</section>
+
+<!-- TESTIMONIAL -->
+
+<section class="quote-section reveal">
+
+<p class="quote-text">
+“Adverra didn’t just run campaigns. They transformed our digital identity into a luxury growth engine.”
+</p>
+
+<p style="opacity:.65;font-size:18px;">
+— Founder, Mumbai Luxury Living
+</p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="contact-container reveal">
+
+<h2>
+Let’s build what’s next.
+</h2>
+
+<p>
+Direct lines to our strategy leads.
+</p>
+
+<div class="contact-numbers">
+
+<a href="tel:+919213525165" class="num-block">
+
+<span>Strategic Partnerships</span>
+
+<strong>+91 92135 25165</strong>
+
+</a>
+
+<a href="tel:+919274436018" class="num-block">
+
+<span>Account Management</span>
+
+<strong>+91 92744 36018</strong>
+
+</a>
+
+</div>
+
+<div class="cta-group">
+
+<a href="https://wa.me/919213525165" class="btn btn-primary">
+WhatsApp Strategy 1
+</a>
+
+<a href="https://wa.me/919274436018" class="btn btn-secondary">
+WhatsApp Strategy 2
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+Copyright © 2026 Adverra Digital Marketing Private Limited.
+All rights reserved.
+</p>
+
+<p style="margin-top:12px;">
+Mumbai • Ahmedabad • Rajkot • Delhi • Bangalore
+</p>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/919213525165" class="wa-float">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script>
+
+const projects = [
+
+{ name:"Taj Heritage Marketing", city:"Mumbai", seed:"65" },
+{ name:"Zaveri Gems Campaign", city:"Surat", seed:"102" },
+{ name:"Royal Rajasthan Stays", city:"Jaipur", seed:"201" },
+{ name:"TechNova Solutions", city:"Bangalore", seed:"45" },
+{ name:"Gourmet Gujarat", city:"Ahmedabad", seed:"88" },
+{ name:"Veda Wellness", city:"Rishikesh", seed:"92" },
+{ name:"Urban Luxe Realty", city:"Gurugram", seed:"105" },
+{ name:"Kashmir Silks D2C", city:"Srinagar", seed:"112" },
+{ name:"Coastal Spices", city:"Kochi", seed:"120" },
+{ name:"IndiWear Apparel", city:"Tiruppur", seed:"135" },
+{ name:"Modern Mandir", city:"Rajkot", seed:"142" },
+{ name:"Bollywood Socials", city:"Mumbai", seed:"155" }
+
+];
+
+const container = document.getElementById('portfolio-container');
+
+projects.forEach(project=>{
+
+const card = document.createElement('div');
+
+card.className='portfolio-card reveal';
+
+card.innerHTML=`
+
+<img src="https://picsum.photos/seed/ind${project.seed}/700/900">
+
+<div class="portfolio-info">
+
+<h4>${project.name}</h4>
+
+<p>${project.city} • Integrated Growth</p>
+
+</div>
+
+`;
+
+container.appendChild(card);
+
+});
+
+/* REVEAL */
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('active');
+
+}
+
+});
+
+},{threshold:0.1});
+
+document.querySelectorAll('.reveal').forEach(el=>{
+
+observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</html>
