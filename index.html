@@ -22,13 +22,7 @@
     --text:#ffffff;
     --gray:#bdbdbd;
     --gold:#d4af37;
-    --blue:#2563eb;
-
     --radius:30px;
-
-    --shadow:
-    0 20px 70px rgba(0,0,0,0.4);
-
     --transition:all .6s cubic-bezier(.16,1,.3,1);
 }
 
@@ -44,17 +38,15 @@ html{
 
 body{
     font-family:'Inter',sans-serif;
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
 
     background:
-    radial-gradient(circle at top left, rgba(37,99,235,0.16), transparent 28%),
-    radial-gradient(circle at top right, rgba(212,175,55,0.12), transparent 28%),
-    var(--bg);
-
-    color:var(--text);
-
-    overflow-x:hidden;
-
-    -webkit-font-smoothing:antialiased;
+    radial-gradient(circle at top left, rgba(37,99,235,.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(212,175,55,.10), transparent 28%),
+    #050505;
 }
 
 a{
@@ -70,26 +62,19 @@ img{
 
 header{
     position:fixed;
-
     top:14px;
     left:50%;
-
     transform:translateX(-50%);
-
     width:94%;
     max-width:1380px;
-
     z-index:9999;
 
-    background:rgba(15,15,15,0.72);
-
+    background:rgba(15,15,15,.72);
     backdrop-filter:blur(18px);
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:22px;
-
-    box-shadow:0 10px 40px rgba(0,0,0,0.4);
 }
 
 nav{
@@ -110,7 +95,6 @@ nav{
 
 .nav-logo img{
     height:44px;
-    width:auto;
     border-radius:12px;
 }
 
@@ -118,7 +102,6 @@ nav{
     font-size:24px;
     font-weight:800;
     color:white;
-    letter-spacing:-1px;
 }
 
 .nav-links{
@@ -128,50 +111,20 @@ nav{
 
 .nav-links a{
     color:#f1f1f1;
-
     font-size:14px;
     font-weight:600;
-
-    position:relative;
-}
-
-.nav-links a::after{
-    content:'';
-
-    position:absolute;
-
-    left:0;
-    bottom:-7px;
-
-    width:0%;
-    height:2px;
-
-    background:linear-gradient(90deg,var(--gold),white);
-
-    transition:.4s;
-}
-
-.nav-links a:hover::after{
-    width:100%;
 }
 
 .nav-btn{
-    padding:13px 22px;
-
+    padding:13px 24px;
     border-radius:999px;
 
-    background:linear-gradient(135deg,var(--gold),#f5d777);
+    background:linear-gradient(135deg,#d4af37,#f7d777);
 
     color:#111;
 
     font-size:13px;
     font-weight:700;
-
-    transition:var(--transition);
-}
-
-.nav-btn:hover{
-    transform:translateY(-3px);
 }
 
 /* HERO */
@@ -181,23 +134,19 @@ nav{
 
     display:flex;
     align-items:center;
-    justify-content:center;
 
     padding:170px 20px 100px;
-
-    position:relative;
-    overflow:hidden;
 }
 
 .hero-grid{
-    width:100%;
     max-width:1380px;
+    margin:auto;
+    width:100%;
 
     display:grid;
     grid-template-columns:1.1fr 1fr;
 
     gap:70px;
-
     align-items:center;
 }
 
@@ -210,14 +159,14 @@ nav{
 
     border-radius:999px;
 
-    background:rgba(255,255,255,0.08);
+    background:rgba(255,255,255,.08);
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,.08);
 
     font-size:14px;
     font-weight:600;
 
-    margin-bottom:28px;
+    margin-bottom:26px;
 }
 
 .hero h1{
@@ -227,25 +176,25 @@ nav{
 
     font-weight:900;
 
-    letter-spacing:-0.08em;
+    letter-spacing:-.08em;
 
     margin-bottom:28px;
 }
 
 .hero h1 span{
-    color:var(--gold);
+    color:#d4af37;
 }
 
 .hero p{
-    color:#d1d1d1;
-
     font-size:22px;
+
+    color:#d1d1d1;
 
     line-height:1.8;
 
-    margin-bottom:42px;
-
     max-width:700px;
+
+    margin-bottom:40px;
 }
 
 .cta-group{
@@ -259,41 +208,27 @@ nav{
 
     border-radius:999px;
 
-    font-size:16px;
-    font-weight:700;
-
-    transition:var(--transition);
-
     display:inline-flex;
     align-items:center;
     justify-content:center;
 
     gap:10px;
+
+    font-size:16px;
+    font-weight:700;
+
+    transition:var(--transition);
 }
 
 .btn-primary{
-    background:linear-gradient(135deg,var(--gold),#f7da7e);
-
+    background:linear-gradient(135deg,#d4af37,#f7d777);
     color:#111;
-
-    box-shadow:
-    0 15px 50px rgba(212,175,55,0.3);
-}
-
-.btn-primary:hover{
-    transform:translateY(-5px);
 }
 
 .btn-secondary{
-    background:rgba(255,255,255,0.08);
-
-    border:1px solid rgba(255,255,255,0.08);
-
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.08);
     color:white;
-}
-
-.btn-secondary:hover{
-    transform:translateY(-5px);
 }
 
 .hero-image{
@@ -305,33 +240,29 @@ nav{
 
     object-fit:cover;
 
-    border-radius:38px;
-
-    box-shadow:var(--shadow);
+    border-radius:36px;
 }
 
 .hero-card{
     position:absolute;
 
     bottom:24px;
-    left:-30px;
+    left:-24px;
 
-    background:rgba(15,15,15,0.85);
+    background:rgba(15,15,15,.85);
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,.08);
 
     backdrop-filter:blur(18px);
 
     border-radius:24px;
 
     padding:22px 28px;
-
-    box-shadow:var(--shadow);
 }
 
 .hero-card h3{
-    font-size:40px;
-    margin-bottom:6px;
+    font-size:42px;
+    margin-bottom:4px;
 }
 
 .hero-card p{
@@ -344,7 +275,6 @@ nav{
 section{
     max-width:1380px;
     margin:auto;
-
     padding:120px 20px;
 }
 
@@ -355,7 +285,7 @@ section{
 
     font-weight:900;
 
-    letter-spacing:-0.06em;
+    letter-spacing:-.06em;
 
     margin-bottom:70px;
 }
@@ -365,34 +295,38 @@ section{
 .grid-bento{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
     gap:24px;
 }
 
 .bento-card{
-    background:rgba(255,255,255,0.05);
+    background:rgba(255,255,255,.05);
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,.08);
 
-    border-radius:32px;
+    border-radius:30px;
 
-    padding:40px;
+    overflow:hidden;
 
     transition:var(--transition);
 }
 
 .bento-card:hover{
     transform:translateY(-8px);
+}
 
-    border-color:rgba(212,175,55,0.4);
+.bento-card img{
+    height:240px;
+    object-fit:cover;
+}
+
+.bento-content{
+    padding:34px;
 }
 
 .bento-card i{
-    font-size:40px;
-
-    color:var(--gold);
-
-    margin-bottom:24px;
+    font-size:34px;
+    color:#d4af37;
+    margin-bottom:18px;
 }
 
 .bento-card h3{
@@ -402,7 +336,6 @@ section{
 
 .bento-card p{
     color:#d0d0d0;
-
     line-height:1.8;
 }
 
@@ -411,7 +344,6 @@ section{
 .portfolio-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-
     gap:22px;
 }
 
@@ -420,11 +352,9 @@ section{
 
     overflow:hidden;
 
-    border-radius:32px;
+    border-radius:30px;
 
-    height:520px;
-
-    box-shadow:var(--shadow);
+    height:500px;
 
     cursor:pointer;
 }
@@ -432,9 +362,7 @@ section{
 .portfolio-card img{
     width:100%;
     height:100%;
-
     object-fit:cover;
-
     transition:1s;
 }
 
@@ -453,7 +381,7 @@ section{
     padding:28px;
 
     background:
-    linear-gradient(0deg, rgba(0,0,0,0.95), transparent);
+    linear-gradient(0deg, rgba(0,0,0,.95), transparent);
 
     color:white;
 }
@@ -476,7 +404,7 @@ section{
 
     border-radius:40px;
 
-    padding:130px 30px;
+    padding:120px 30px;
 
     text-align:center;
 }
@@ -488,11 +416,9 @@ section{
 
     line-height:1.3;
 
-    letter-spacing:-0.05em;
-
     max-width:1000px;
 
-    margin:auto auto 30px;
+    margin:auto auto 26px;
 }
 
 /* CONTACT */
@@ -507,7 +433,7 @@ section{
 
     text-align:center;
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,.08);
 }
 
 .contact-container h2{
@@ -516,13 +442,10 @@ section{
     font-weight:900;
 
     margin-bottom:18px;
-
-    letter-spacing:-0.06em;
 }
 
 .contact-container p{
     color:#d0d0d0;
-
     font-size:22px;
 }
 
@@ -538,28 +461,19 @@ section{
 }
 
 .num-block{
-    background:rgba(255,255,255,0.05);
+    background:rgba(255,255,255,.05);
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:24px;
 
     padding:32px 36px;
 
     min-width:280px;
-
-    transition:var(--transition);
-}
-
-.num-block:hover{
-    transform:translateY(-6px);
-
-    border-color:rgba(212,175,55,0.4);
 }
 
 .num-block strong{
     color:white;
-
     font-size:30px;
 }
 
@@ -567,9 +481,7 @@ section{
 
 footer{
     padding:70px 20px;
-
     text-align:center;
-
     color:#b8b8b8;
 }
 
@@ -597,9 +509,6 @@ footer{
     font-size:34px;
 
     z-index:9999;
-
-    box-shadow:
-    0 18px 50px rgba(37,211,102,0.4);
 }
 
 /* REVEAL */
@@ -619,125 +528,85 @@ footer{
 
 @media(max-width:1100px){
 
-    .hero-grid{
-        grid-template-columns:1fr;
-    }
+.hero-grid{
+    grid-template-columns:1fr;
+}
 
-    .hero-image{
-        order:-1;
-    }
+.hero-image{
+    order:-1;
+}
 
-    .hero-image img{
-        height:500px;
-    }
+.hero-image img{
+    height:500px;
+}
 
-    .hero-card{
-        left:20px;
-    }
+.hero-card{
+    left:20px;
+}
 
-    .portfolio-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+.portfolio-grid{
+    grid-template-columns:repeat(2,1fr);
+}
 
 }
 
 @media(max-width:768px){
 
-    nav{
-        padding:0 16px;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .nav-btn{
-        display:none;
-    }
-
-    .hero{
-        padding-top:130px;
-    }
-
-    .hero-grid{
-        gap:40px;
-    }
-
-    .hero h1{
-        font-size:52px;
-        line-height:1;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    .hero-image img{
-        height:400px;
-        border-radius:28px;
-    }
-
-    .hero-card{
-        position:relative;
-        left:0;
-        bottom:0;
-        margin-top:18px;
-    }
-
-    .cta-group{
-        flex-direction:column;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-    .portfolio-grid{
-        grid-template-columns:1fr;
-    }
-
-    .portfolio-card{
-        height:420px;
-    }
-
-    .section-title{
-        margin-bottom:50px;
-    }
-
-    .bento-card{
-        padding:34px;
-    }
-
-    .contact-container{
-        padding:80px 18px;
-    }
-
-    .contact-numbers{
-        flex-direction:column;
-    }
-
-    .num-block{
-        width:100%;
-        min-width:100%;
-    }
-
+.nav-links,
+.nav-btn{
+    display:none;
 }
 
-/* EXTRA SMALL */
+.hero{
+    padding-top:130px;
+}
 
-@media(max-width:480px){
+.hero-grid{
+    gap:40px;
+}
 
-    .hero h1{
-        font-size:44px;
-    }
+.hero h1{
+    font-size:52px;
+}
 
-    .section-title{
-        font-size:38px;
-    }
+.hero p{
+    font-size:17px;
+}
 
-    .contact-container h2{
-        font-size:42px;
-    }
+.hero-image img{
+    height:400px;
+}
+
+.hero-card{
+    position:relative;
+    left:0;
+    bottom:0;
+    margin-top:18px;
+}
+
+.cta-group{
+    flex-direction:column;
+}
+
+.btn{
+    width:100%;
+}
+
+.portfolio-grid{
+    grid-template-columns:1fr;
+}
+
+.portfolio-card{
+    height:420px;
+}
+
+.contact-numbers{
+    flex-direction:column;
+}
+
+.num-block{
+    width:100%;
+}
 
 }
 
@@ -789,19 +658,19 @@ Let's Talk
 
 <i class="fas fa-star"></i>
 
-Creative Digital Agency
+India's Creative Growth Agency
 
 </div>
 
 <h1>
-We Grow <span>Modern</span><br>
-Indian Brands.
+We Scale <span>Indian</span><br>
+Brands Online.
 </h1>
 
 <p>
-Adverra helps businesses scale with creative content,
-performance marketing, social media growth,
-video production and premium website experiences.
+Adverra helps ambitious businesses grow with premium content,
+performance marketing, social media management,
+video production and high-converting websites.
 </p>
 
 <div class="cta-group">
@@ -812,7 +681,7 @@ Start Growing
 
 <a href="https://wa.me/919213525165" class="btn btn-secondary">
 
-View Services
+Explore Services
 
 <i class="fas fa-arrow-right"></i>
 
@@ -824,13 +693,13 @@ View Services
 
 <div class="hero-image reveal">
 
-<img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=1400&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1400&auto=format&fit=crop">
 
 <div class="hero-card">
 
 <h3>400%</h3>
 
-<p>Average Brand Growth</p>
+<p>Average Client Growth</p>
 
 </div>
 
@@ -845,80 +714,116 @@ View Services
 <section id="services">
 
 <h2 class="section-title reveal">
-What We Do.
+Our Expertise.
 </h2>
 
 <div class="grid-bento">
 
 <div class="bento-card reveal">
 
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop">
+
+<div class="bento-content">
+
 <i class="fab fa-instagram"></i>
 
 <h3>Social Media</h3>
 
 <p>
-Creative content and growth strategies designed for Instagram and modern platforms.
+Premium Instagram content and creative strategies designed for Indian brands.
 </p>
 
 </div>
 
+</div>
+
 <div class="bento-card reveal">
+
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
+
+<div class="bento-content">
 
 <i class="fas fa-bullseye"></i>
 
 <h3>Paid Ads</h3>
 
 <p>
-High-converting Meta and Google campaigns focused on real business growth.
+Meta and Google advertising campaigns focused on ROI and business growth.
 </p>
 
 </div>
 
+</div>
+
 <div class="bento-card reveal">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+<div class="bento-content">
 
 <i class="fas fa-camera"></i>
 
 <h3>Brand Shoots</h3>
 
 <p>
-Professional product photography and commercial visuals for modern Indian brands.
+Professional photography and visuals crafted for modern Indian businesses.
 </p>
 
 </div>
 
+</div>
+
 <div class="bento-card reveal">
+
+<img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1200&auto=format&fit=crop">
+
+<div class="bento-content">
 
 <i class="fas fa-video"></i>
 
 <h3>Video Production</h3>
 
 <p>
-Short-form reels, ad films and engaging videos crafted for maximum reach.
+Cinematic reels, ads and video campaigns built for attention and engagement.
 </p>
 
 </div>
 
+</div>
+
 <div class="bento-card reveal">
+
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop">
+
+<div class="bento-content">
 
 <i class="fas fa-laptop-code"></i>
 
 <h3>Website Design</h3>
 
 <p>
-Modern responsive websites with premium UI/UX and conversion-focused layouts.
+Modern responsive websites with premium UI/UX and smooth user experience.
 </p>
 
 </div>
 
+</div>
+
 <div class="bento-card reveal">
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop">
+
+<div class="bento-content">
 
 <i class="fas fa-chart-line"></i>
 
 <h3>Growth Strategy</h3>
 
 <p>
-Smart marketing systems and analytics to scale brands faster.
+Smart data-driven systems that help brands scale faster online.
 </p>
+
+</div>
 
 </div>
 
@@ -931,10 +836,24 @@ Smart marketing systems and analytics to scale brands faster.
 <section id="portfolio">
 
 <h2 class="section-title reveal">
-Recent Work.
+Recent Projects.
 </h2>
 
 <div class="portfolio-grid">
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>Fashion Brand</h4>
+
+<p>Instagram Campaign</p>
+
+</div>
+
+</div>
 
 <div class="portfolio-card reveal">
 
@@ -942,23 +861,9 @@ Recent Work.
 
 <div class="portfolio-info">
 
-<h4>Fashion Campaign</h4>
+<h4>Beauty Campaign</h4>
 
-<p>Instagram Growth</p>
-
-</div>
-
-</div>
-
-<div class="portfolio-card reveal">
-
-<img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=1200&auto=format&fit=crop">
-
-<div class="portfolio-info">
-
-<h4>Jewellery Brand</h4>
-
-<p>Commercial Shoot</p>
+<p>Social Media Growth</p>
 
 </div>
 
@@ -966,13 +871,13 @@ Recent Work.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Startup Marketing</h4>
+<h4>Corporate Branding</h4>
 
-<p>Business Growth</p>
+<p>Digital Marketing</p>
 
 </div>
 
@@ -980,11 +885,11 @@ Recent Work.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Hotel Branding</h4>
+<h4>Hotel Promotion</h4>
 
 <p>Hospitality Campaign</p>
 
@@ -994,13 +899,41 @@ Recent Work.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1621784563330-caee0b138a00?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Beauty Brand</h4>
+<h4>Model Shoot</h4>
 
-<p>Social Media Content</p>
+<p>Brand Advertising</p>
+
+</div>
+
+</div>
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>Luxury Fashion</h4>
+
+<p>Visual Branding</p>
+
+</div>
+
+</div>
+
+<div class="portfolio-card reveal">
+
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop">
+
+<div class="portfolio-info">
+
+<h4>Startup Growth</h4>
+
+<p>Performance Marketing</p>
 
 </div>
 
@@ -1020,34 +953,6 @@ Recent Work.
 
 </div>
 
-<div class="portfolio-card reveal">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
-
-<div class="portfolio-info">
-
-<h4>Corporate Branding</h4>
-
-<p>Digital Strategy</p>
-
-</div>
-
-</div>
-
-<div class="portfolio-card reveal">
-
-<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
-
-<div class="portfolio-info">
-
-<h4>Model Campaign</h4>
-
-<p>Brand Promotion</p>
-
-</div>
-
-</div>
-
 </div>
 
 </section>
@@ -1057,12 +962,12 @@ Recent Work.
 <section class="quote-section reveal">
 
 <p class="quote-text">
-“Adverra completely transformed our online presence.
-The campaigns, content and branding delivered incredible growth.”
+“Adverra transformed our digital presence with stunning content,
+creative strategy and powerful growth campaigns.”
 </p>
 
-<p style="margin-top:20px;color:#d2d2d2;font-size:18px;">
-— Founder, Fashion Brand
+<p style="margin-top:18px;color:#d0d0d0;font-size:18px;">
+— Founder, Indian Fashion Brand
 </p>
 
 </section>
@@ -1078,7 +983,7 @@ Let’s Build Something Amazing.
 </h2>
 
 <p>
-Connect directly with our team.
+Connect directly with our creative team.
 </p>
 
 <div class="contact-numbers">
@@ -1117,7 +1022,6 @@ Talk With Team
 
 <p>
 © 2026 Adverra Digital Marketing Private Limited.
-All rights reserved.
 </p>
 
 <p style="margin-top:12px;">
