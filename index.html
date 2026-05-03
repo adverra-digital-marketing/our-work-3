@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adverra | Luxury Digital Growth Agency</title>
+<title>Adverra | Digital Growth Agency</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,19 +17,16 @@
 <style>
 
 :root{
-    --bg:#060606;
-    --card:#111111;
+    --bg:#050505;
+    --card:#101010;
     --text:#ffffff;
-    --gray:#b6b6b6;
+    --gray:#bdbdbd;
     --gold:#d4af37;
-    --blue:#2563eb;
-
-    --radius:34px;
 
     --shadow:
     0 20px 80px rgba(0,0,0,0.45);
 
-    --transition:all .7s cubic-bezier(.16,1,.3,1);
+    --transition:all .6s cubic-bezier(.16,1,.3,1);
 }
 
 *{
@@ -44,16 +41,14 @@ html{
 
 body{
     font-family:'Inter',sans-serif;
+
     background:
-    radial-gradient(circle at top left, rgba(37,99,235,0.18), transparent 30%),
-    radial-gradient(circle at top right, rgba(212,175,55,0.14), transparent 30%),
+    radial-gradient(circle at top left, rgba(212,175,55,0.10), transparent 30%),
     #050505;
 
     color:var(--text);
 
     overflow-x:hidden;
-
-    -webkit-font-smoothing:antialiased;
 }
 
 a{
@@ -80,16 +75,13 @@ header{
 
     z-index:9999;
 
-    background:rgba(15,15,15,0.65);
+    background:rgba(10,10,10,0.75);
 
     backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
 
     border:1px solid rgba(255,255,255,0.08);
 
     border-radius:24px;
-
-    box-shadow:0 10px 50px rgba(0,0,0,0.4);
 }
 
 nav{
@@ -99,7 +91,7 @@ nav{
     align-items:center;
     justify-content:space-between;
 
-    padding:0 28px;
+    padding:0 24px;
 }
 
 .nav-logo{
@@ -109,8 +101,8 @@ nav{
 }
 
 .nav-logo img{
-    height:46px;
     width:46px;
+    height:46px;
     object-fit:cover;
     border-radius:14px;
 }
@@ -118,40 +110,18 @@ nav{
 .nav-logo span{
     font-size:26px;
     font-weight:800;
-    letter-spacing:-1px;
     color:white;
 }
 
 .nav-links{
     display:flex;
-    gap:36px;
+    gap:34px;
 }
 
 .nav-links a{
-    color:#f1f1f1;
+    color:white;
     font-size:14px;
     font-weight:600;
-    position:relative;
-}
-
-.nav-links a::after{
-    content:'';
-
-    position:absolute;
-
-    left:0;
-    bottom:-8px;
-
-    width:0%;
-    height:2px;
-
-    background:linear-gradient(90deg,var(--gold),#fff);
-
-    transition:.4s;
-}
-
-.nav-links a:hover::after{
-    width:100%;
 }
 
 .nav-btn{
@@ -159,24 +129,18 @@ nav{
 
     border-radius:999px;
 
-    background:linear-gradient(135deg,var(--gold),#f5d778);
+    background:linear-gradient(135deg,var(--gold),#f4d56b);
 
     color:#111;
 
     font-size:13px;
     font-weight:700;
-
-    transition:var(--transition);
-}
-
-.nav-btn:hover{
-    transform:translateY(-3px);
 }
 
 .menu-btn{
     display:none;
-    color:white;
     font-size:24px;
+    color:white;
 }
 
 /* HERO */
@@ -186,24 +150,21 @@ nav{
 
     display:flex;
     align-items:center;
-    justify-content:center;
 
     padding:180px 20px 120px;
-
-    position:relative;
-
-    overflow:hidden;
 }
 
 .hero-grid{
     max-width:1400px;
 
+    margin:auto;
+
     width:100%;
 
     display:grid;
-    grid-template-columns:1.2fr 1fr;
+    grid-template-columns:1.1fr 1fr;
 
-    gap:60px;
+    gap:70px;
 
     align-items:center;
 }
@@ -217,28 +178,26 @@ nav{
 
     border-radius:999px;
 
-    background:rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.06);
 
     border:1px solid rgba(255,255,255,0.08);
 
+    margin-bottom:28px;
+
     font-size:14px;
     font-weight:600;
-
-    margin-bottom:30px;
-
-    backdrop-filter:blur(20px);
 }
 
 .hero h1{
-    font-size:clamp(56px,8vw,120px);
+    font-size:clamp(54px,8vw,115px);
 
-    line-height:0.92;
+    line-height:0.95;
 
     font-weight:900;
 
-    letter-spacing:-0.08em;
+    letter-spacing:-0.06em;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 }
 
 .gold{
@@ -246,15 +205,15 @@ nav{
 }
 
 .hero p{
-    font-size:22px;
+    font-size:21px;
 
-    color:#cfcfcf;
+    color:#d2d2d2;
 
     line-height:1.8;
 
-    margin-bottom:45px;
-
     max-width:700px;
+
+    margin-bottom:40px;
 }
 
 .cta-group{
@@ -268,45 +227,32 @@ nav{
 
     border-radius:999px;
 
-    font-size:16px;
+    font-size:15px;
     font-weight:700;
-
-    transition:var(--transition);
 
     display:inline-flex;
     align-items:center;
     justify-content:center;
     gap:10px;
+
+    transition:var(--transition);
 }
 
 .btn-primary{
-    background:linear-gradient(135deg,var(--gold),#f6d777);
+    background:linear-gradient(135deg,var(--gold),#f7d777);
     color:#111;
-
-    box-shadow:
-    0 15px 50px rgba(212,175,55,0.35);
-}
-
-.btn-primary:hover{
-    transform:translateY(-6px) scale(1.03);
 }
 
 .btn-secondary{
-    background:rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.06);
 
     color:white;
 
     border:1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(20px);
 }
 
-.btn-secondary:hover{
-    transform:translateY(-6px);
-}
-
-.hero-image{
-    position:relative;
+.btn:hover{
+    transform:translateY(-5px);
 }
 
 .hero-image img{
@@ -314,39 +260,34 @@ nav{
 
     object-fit:cover;
 
-    border-radius:40px;
+    border-radius:36px;
 
     box-shadow:var(--shadow);
 }
 
 .hero-card{
-    position:absolute;
+    position:relative;
 
-    bottom:30px;
-    left:-40px;
+    margin-top:20px;
 
-    background:rgba(15,15,15,0.78);
+    width:max-content;
 
-    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,0.06);
 
     border:1px solid rgba(255,255,255,0.08);
 
-    border-radius:26px;
+    padding:22px 28px;
 
-    padding:24px 28px;
-
-    box-shadow:var(--shadow);
+    border-radius:24px;
 }
 
 .hero-card h3{
-    font-size:40px;
-    margin-bottom:6px;
+    font-size:42px;
 }
 
 .hero-card p{
     font-size:14px;
     margin:0;
-    color:#d5d5d5;
 }
 
 /* SECTIONS */
@@ -355,28 +296,28 @@ section{
     max-width:1400px;
     margin:auto;
 
-    padding:120px 20px;
+    padding:110px 20px;
 }
 
 .section-title{
-    font-size:clamp(42px,5vw,70px);
-
     text-align:center;
+
+    font-size:clamp(40px,5vw,68px);
 
     font-weight:900;
 
     margin-bottom:70px;
 
-    letter-spacing:-0.06em;
+    letter-spacing:-0.05em;
 }
 
 /* SERVICES */
 
 .grid-bento{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
-    gap:28px;
+    gap:26px;
 }
 
 .bento-card{
@@ -384,36 +325,32 @@ section{
 
     border:1px solid rgba(255,255,255,0.08);
 
-    backdrop-filter:blur(20px);
+    border-radius:32px;
 
-    border-radius:34px;
-
-    padding:42px;
+    padding:38px;
 
     transition:var(--transition);
 }
 
 .bento-card:hover{
-    transform:translateY(-10px);
-    border-color:rgba(212,175,55,0.35);
+    transform:translateY(-8px);
 }
 
 .bento-card i{
-    font-size:42px;
-
-    margin-bottom:24px;
+    font-size:40px;
 
     color:var(--gold);
+
+    margin-bottom:22px;
 }
 
 .bento-card h3{
-    font-size:30px;
+    font-size:28px;
     margin-bottom:16px;
 }
 
 .bento-card p{
-    color:#cfcfcf;
-
+    color:#d1d1d1;
     line-height:1.8;
 }
 
@@ -423,7 +360,7 @@ section{
     display:grid;
     grid-template-columns:repeat(4,1fr);
 
-    gap:24px;
+    gap:22px;
 }
 
 .portfolio-card{
@@ -431,13 +368,11 @@ section{
 
     overflow:hidden;
 
-    border-radius:34px;
+    border-radius:28px;
 
-    height:520px;
+    height:480px;
 
-    cursor:pointer;
-
-    box-shadow:var(--shadow);
+    background:#111;
 }
 
 .portfolio-card img{
@@ -450,7 +385,7 @@ section{
 }
 
 .portfolio-card:hover img{
-    transform:scale(1.1);
+    transform:scale(1.08);
 }
 
 .portfolio-info{
@@ -461,39 +396,36 @@ section{
 
     width:100%;
 
-    padding:30px;
+    padding:26px;
 
     background:
-    linear-gradient(0deg, rgba(0,0,0,0.92), transparent);
-
-    color:white;
+    linear-gradient(0deg, rgba(0,0,0,0.95), transparent);
 }
 
 .portfolio-info h4{
-    font-size:24px;
-    margin-bottom:8px;
+    font-size:22px;
+    margin-bottom:6px;
 }
 
 .portfolio-info p{
-    color:#dadada;
     font-size:14px;
+    color:#d8d8d8;
 }
 
-/* TESTIMONIAL */
+/* QUOTE */
 
 .quote-section{
-    background:
-    linear-gradient(135deg,#0c0c0c,#161616);
+    background:linear-gradient(135deg,#0e0e0e,#151515);
 
-    border-radius:44px;
+    border-radius:40px;
 
-    padding:140px 30px;
+    padding:120px 30px;
 
     text-align:center;
 }
 
 .quote-text{
-    font-size:clamp(32px,4vw,58px);
+    font-size:clamp(32px,4vw,56px);
 
     font-weight:800;
 
@@ -502,39 +434,32 @@ section{
     max-width:1000px;
 
     margin:auto auto 30px;
-
-    letter-spacing:-0.05em;
 }
 
 /* CONTACT */
 
 .contact-container{
-    background:
-    linear-gradient(135deg,#101010,#171717);
+    background:linear-gradient(135deg,#101010,#161616);
 
-    border-radius:44px;
+    border-radius:40px;
 
-    padding:120px 30px;
+    padding:110px 30px;
 
     text-align:center;
-
-    border:1px solid rgba(255,255,255,0.08);
 }
 
 .contact-container h2{
-    font-size:clamp(44px,5vw,76px);
+    font-size:clamp(42px,5vw,74px);
 
     font-weight:900;
 
     margin-bottom:20px;
-
-    letter-spacing:-0.06em;
 }
 
 .contact-container p{
     color:#d0d0d0;
 
-    font-size:22px;
+    font-size:20px;
 }
 
 .contact-numbers{
@@ -551,34 +476,26 @@ section{
 
     border:1px solid rgba(255,255,255,0.08);
 
-    border-radius:28px;
+    border-radius:26px;
 
-    padding:30px 38px;
+    padding:28px 34px;
 
-    min-width:290px;
-
-    transition:var(--transition);
-}
-
-.num-block:hover{
-    transform:translateY(-8px);
-    border-color:rgba(212,175,55,0.35);
+    min-width:280px;
 }
 
 .num-block strong{
-    font-size:28px;
-
+    font-size:26px;
     color:white;
 }
 
 /* FOOTER */
 
 footer{
-    padding:70px 20px;
+    padding:60px 20px;
 
     text-align:center;
 
-    color:#b8b8b8;
+    color:#bdbdbd;
 }
 
 /* WHATSAPP */
@@ -586,11 +503,11 @@ footer{
 .wa-float{
     position:fixed;
 
-    right:24px;
-    bottom:24px;
+    right:22px;
+    bottom:22px;
 
-    width:74px;
-    height:74px;
+    width:72px;
+    height:72px;
 
     border-radius:50%;
 
@@ -602,26 +519,19 @@ footer{
 
     color:white;
 
-    font-size:36px;
+    font-size:34px;
 
-    z-index:99999;
+    z-index:9999;
 
-    box-shadow:
-    0 20px 50px rgba(37,211,102,0.4);
-
-    transition:var(--transition);
-}
-
-.wa-float:hover{
-    transform:translateY(-6px) scale(1.08);
+    box-shadow:0 20px 50px rgba(37,211,102,0.4);
 }
 
 /* REVEAL */
 
 .reveal{
     opacity:0;
-    transform:translateY(50px);
-    transition:1s cubic-bezier(.16,1,.3,1);
+    transform:translateY(40px);
+    transition:1s;
 }
 
 .reveal.active{
@@ -637,25 +547,17 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .hero-image img{
-        height:600px;
-    }
-
-    .hero-card{
-        left:20px;
-    }
-
     .portfolio-grid{
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-image img{
+        height:560px;
     }
 
 }
 
 @media(max-width:768px){
-
-    nav{
-        padding:0 18px;
-    }
 
     .nav-links,
     .nav-btn{
@@ -664,6 +566,10 @@ footer{
 
     .menu-btn{
         display:block;
+    }
+
+    nav{
+        padding:0 18px;
     }
 
     .hero{
@@ -682,13 +588,8 @@ footer{
         height:420px;
     }
 
-    .hero-card{
-        position:relative;
-
-        left:0;
-        bottom:0;
-
-        margin-top:20px;
+    .portfolio-grid{
+        grid-template-columns:1fr;
     }
 
     .cta-group{
@@ -697,10 +598,6 @@ footer{
 
     .btn{
         width:100%;
-    }
-
-    .portfolio-grid{
-        grid-template-columns:1fr;
     }
 
     .contact-container p{
@@ -729,14 +626,14 @@ footer{
 
 <div class="nav-links">
 
-<a href="#services">Expertise</a>
-<a href="#portfolio">Stories</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Work</a>
 <a href="#contact">Contact</a>
 
 </div>
 
 <a href="#contact" class="nav-btn">
-Book Consultation
+Book Call
 </a>
 
 <div class="menu-btn">
@@ -757,27 +654,26 @@ Book Consultation
 
 <div class="hero-badge">
 
-<i class="fas fa-crown"></i>
+<i class="fas fa-star"></i>
 
-India's Luxury Growth Agency
+India's Digital Growth Agency
 
 </div>
 
 <h1>
-We Build <span class="gold">Luxury</span><br>
-Digital Brands.
+We Grow <span class="gold">Modern</span><br>
+Indian Brands.
 </h1>
 
 <p>
-Adverra creates world-class digital experiences,
-viral social campaigns, premium visuals and
-high-converting growth systems for ambitious Indian brands.
+Adverra creates high-performing websites, social campaigns,
+content production and growth systems for ambitious Indian businesses.
 </p>
 
 <div class="cta-group">
 
 <a href="#contact" class="btn btn-primary">
-Start Your Growth
+Start Growing
 </a>
 
 <a href="https://wa.me/919213525165" class="btn btn-secondary">
@@ -794,13 +690,13 @@ View Strategy
 
 <div class="hero-image reveal">
 
-<img src="https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?q=80&w=1400&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1609386467018-f355a0dd7f8c?q=80&w=1400&auto=format&fit=crop">
 
 <div class="hero-card">
 
 <h3>400%</h3>
 
-<p>Average Revenue Growth</p>
+<p>Average Business Growth</p>
 
 </div>
 
@@ -815,7 +711,7 @@ View Strategy
 <section id="services">
 
 <h2 class="section-title reveal">
-Premium Services.
+What We Do
 </h2>
 
 <div class="grid-bento">
@@ -827,7 +723,7 @@ Premium Services.
 <h3>Social Media</h3>
 
 <p>
-Luxury content systems designed to dominate Instagram and modern attention platforms.
+Instagram reels, content systems and branding that helps Indian businesses grow online.
 </p>
 
 </div>
@@ -836,10 +732,10 @@ Luxury content systems designed to dominate Instagram and modern attention platf
 
 <i class="fas fa-bullseye"></i>
 
-<h3>Paid Advertising</h3>
+<h3>Performance Ads</h3>
 
 <p>
-Meta and Google performance campaigns engineered for maximum profitable scaling.
+Meta and Google ad campaigns focused on leads, sales and business growth.
 </p>
 
 </div>
@@ -848,10 +744,10 @@ Meta and Google performance campaigns engineered for maximum profitable scaling.
 
 <i class="fas fa-camera"></i>
 
-<h3>Luxury Shoots</h3>
+<h3>Brand Shoots</h3>
 
 <p>
-Premium product photography and cinematic visuals crafted for elite branding.
+Professional Indian-style product shoots and campaign visuals for your brand.
 </p>
 
 </div>
@@ -860,10 +756,10 @@ Premium product photography and cinematic visuals crafted for elite branding.
 
 <i class="fas fa-video"></i>
 
-<h3>Video Production</h3>
+<h3>Video Content</h3>
 
 <p>
-High-end ad films and viral short-form content with luxury visual storytelling.
+Modern short-form videos and ad creatives designed for maximum engagement.
 </p>
 
 </div>
@@ -872,10 +768,10 @@ High-end ad films and viral short-form content with luxury visual storytelling.
 
 <i class="fas fa-laptop-code"></i>
 
-<h3>Luxury Websites</h3>
+<h3>Websites</h3>
 
 <p>
-High-converting modern websites with premium UI/UX and lightning-fast performance.
+Fast modern websites with premium UI/UX and mobile-friendly design.
 </p>
 
 </div>
@@ -887,7 +783,7 @@ High-converting modern websites with premium UI/UX and lightning-fast performanc
 <h3>Growth Systems</h3>
 
 <p>
-Advanced analytics and conversion systems optimized for aggressive business growth.
+Analytics, funnels and automation systems that improve conversions and scaling.
 </p>
 
 </div>
@@ -901,20 +797,20 @@ Advanced analytics and conversion systems optimized for aggressive business grow
 <section id="portfolio">
 
 <h2 class="section-title reveal">
-Luxury Success Stories.
+Recent Projects
 </h2>
 
 <div class="portfolio-grid">
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1612765417582-546cb92af4b5?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Luxury Fashion</h4>
+<h4>Fashion Brand</h4>
 
-<p>Instagram Growth Campaign</p>
+<p>Instagram Campaign</p>
 
 </div>
 
@@ -922,13 +818,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1604147706283-d7119b5b822c?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Jewellery Branding</h4>
+<h4>Jewellery Brand</h4>
 
-<p>Luxury Photo Production</p>
+<p>Creative Production</p>
 
 </div>
 
@@ -936,13 +832,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Corporate Campaign</h4>
+<h4>Hotel Campaign</h4>
 
-<p>Digital Strategy & Ads</p>
+<p>Digital Strategy</p>
 
 </div>
 
@@ -954,7 +850,7 @@ Luxury Success Stories.
 
 <div class="portfolio-info">
 
-<h4>Luxury Resorts</h4>
+<h4>Resort Branding</h4>
 
 <p>Hospitality Marketing</p>
 
@@ -964,13 +860,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1596450514659-9f4b8d34c2ce?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Premium Apparel</h4>
+<h4>Business Campaign</h4>
 
-<p>Fashion Brand Growth</p>
+<p>Brand Growth</p>
 
 </div>
 
@@ -978,13 +874,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Luxury Real Estate</h4>
+<h4>Real Estate</h4>
 
-<p>High-End Visual Campaign</p>
+<p>Visual Marketing</p>
 
 </div>
 
@@ -992,13 +888,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Interior Branding</h4>
+<h4>Interior Design</h4>
 
-<p>Luxury Space Marketing</p>
+<p>Social Content</p>
 
 </div>
 
@@ -1006,13 +902,13 @@ Luxury Success Stories.
 
 <div class="portfolio-card reveal">
 
-<img src="https://images.unsplash.com/photo-1612765417582-546cb92af4b5?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop">
 
 <div class="portfolio-info">
 
-<h4>Beauty Campaign</h4>
+<h4>Beauty Brand</h4>
 
-<p>Premium Social Media</p>
+<p>Social Media Marketing</p>
 
 </div>
 
@@ -1027,12 +923,12 @@ Luxury Success Stories.
 <section class="quote-section reveal">
 
 <p class="quote-text">
-“Adverra transformed our brand into a luxury digital powerhouse.
-The quality, aesthetics and growth were beyond expectations.”
+“Adverra completely transformed our online presence.
+The branding, content and campaigns helped us grow faster than expected.”
 </p>
 
 <p style="margin-top:20px;color:#d2d2d2;font-size:18px;">
-— Founder, Indian Luxury Fashion Brand
+— Founder, Indian Fashion Brand
 </p>
 
 </section>
@@ -1044,11 +940,11 @@ The quality, aesthetics and growth were beyond expectations.”
 <div class="contact-container reveal">
 
 <h2>
-Let’s Build Something Iconic.
+Let’s Build Your Brand.
 </h2>
 
 <p>
-Direct access to Adverra growth strategists.
+Talk directly with the Adverra team.
 </p>
 
 <div class="contact-numbers">
@@ -1070,11 +966,11 @@ Direct access to Adverra growth strategists.
 <div class="cta-group">
 
 <a href="https://wa.me/919213525165" class="btn btn-primary">
-WhatsApp Strategy 1
+WhatsApp Team
 </a>
 
 <a href="https://wa.me/919274436018" class="btn btn-secondary">
-WhatsApp Strategy 2
+Call Now
 </a>
 
 </div>
@@ -1091,7 +987,7 @@ All rights reserved.
 </p>
 
 <p style="margin-top:12px;">
-Mumbai • Ahmedabad • Rajkot • Delhi • Bangalore
+Ahmedabad • Rajkot • Mumbai • Delhi • Bangalore
 </p>
 
 </footer>
